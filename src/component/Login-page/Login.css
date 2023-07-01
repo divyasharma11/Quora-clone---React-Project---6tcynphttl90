@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
+*{
+    padding: 0;
+    margin: 0;
+}
+.login-container{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url("https://qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.home_page_bg_desktop.png-26-4770753d59b970e1.png");
+}
+.login{
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    width: 500px;
+    background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+.login-logo{
+   display: flex;
+    justify-content: center;
+}
+.login-description{
+    color: gray;
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+    margin-top: 12px;
+}
+.login-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.login-tittle{
+    font-size: 20px;
+    padding: 20px;
+}
+.login-inputfield{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  flex: 0.5;
+  margin-left: 20px;
+}
+.login-inputfield{
+    display: flex;
+    flex-direction: column;
+    padding: 6px;
+}
+.login-input{
+    padding: 5px;
+}
+.login-input input{
+    padding: 10px;
+    background-color: rgb(236, 236, 236);
+    width: 100%;
+    outline: none;
+    border: none;
+}
+.login-forget{
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.login-forget small{
+    color: gray;
+    cursor: pointer;
+}
+.login-forget small:hover{
+    color: blue;
+    text-decoration: underline;
+}
+.login-forget button{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 40px;
+}
+.login-form button{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 12px;
+    width: 50%;
+}
+
+  .login__footer {
+    margin-top: 20px;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  .login__footer > p {
+    color: gray;
+    font-size: small;
+    cursor: pointer;
+  }
+  
+  .login__footer > p:hover {
+    text-decoration: underline;
+  }
+  

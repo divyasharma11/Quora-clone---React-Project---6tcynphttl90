@@ -1,0 +1,16 @@
+.btn{
+    margin-left: 2rem;
+    margin-top: 7px;
+    width: 8rem;
+    height: 2rem;
+    border-radius: 7px;
+    border: none;
+   text-align: center;
+   padding-left: 20px;
+    background-color: rgb(185, 43, 39);
+    color:rgb(255, 255, 255);
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(160, 54, 50);
+}
