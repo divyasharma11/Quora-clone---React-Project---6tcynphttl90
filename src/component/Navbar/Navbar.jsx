@@ -10,12 +10,17 @@ import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import Button from '../ButtonComponent/Button';
 import { useNavigate } from 'react-router-dom';
+import Modal from 'react-modal';
+import AddQues from '../AddQues/AddQues';
+import AddAns from '../AddAns/AddAns';
 
 
 
 const Navbar = (props) => {
   const navigate = useNavigate();
-
+  const [isQuesModalOpen,setIsQuesModalOpen]=useState(false);
+  const [isAnsModalOpen,setIsAnsModalOpen]=useState(false);
+  
   const searching=()=> {
     console.log("hello")
     var QuestionAnswerList = JSON.parse(localStorage.getItem("QuestionAnswer"));
@@ -56,10 +61,47 @@ const Navbar = (props) => {
                 <button onClick={searching} className="search-btn">Search1</button>    
        </div>
        <div>
-                    <Button onClick={()=>navigate('/add_ques')} style={{fontSize:"1rem"}} className='btn'><span>Add Questions</span></Button>
+          <Button
+           onClick={()=>setIsQuesModalOpen(true)} style={{fontSize:"1rem"}} className='btn'><span>Add Questions</span></Button>
+              <Modal
+              isOpen={isQuesModalOpen}
+              onClose={()=>setIsQuesModalOpen(false)}
+              style={{
+                overlay: {
+                  width: 700,
+                  height: 500,
+                  backgroundColor: "rgba(0,0,0,0.8)",
+                  zIndex: "1000",
+                  top: "50%",
+                  left: "50%",
+                  marginTop: "-200px",
+                  marginLeft: "-350px",
+                },
+              }}
+              >
+                <AddQues setIsModalOpen={setIsQuesModalOpen} />
+              </Modal>
                 </div>
                 <div>
-                    <Button onClick={()=>navigate('/ans_ques')} style={{fontSize:"1rem"}} className='btn'><span>Add Answers</span></Button>
+                    <Button onClick={()=>setIsAnsModalOpen(true)} style={{fontSize:"1rem"}} className='btn'><span>Add Answers</span></Button>
+                    <Modal
+              isOpen={isAnsModalOpen}
+              onClose={()=>setIsAnsModalOpen(false)}
+              style={{
+                overlay: {
+                  width: 700,
+                  height: 500,
+                  backgroundColor: "rgba(0,0,0,0.8)",
+                  zIndex: "1000",
+                  top: "50%",
+                  left: "50%",
+                  marginTop: "-200px",
+                  marginLeft: "-350px",
+                },
+              }}
+              >
+                <AddAns setIsAnsModalOpen={setIsAnsModalOpen} />
+              </Modal>
                 </div>
                 <div>
                     <Button onClick={()=>navigate('/')} style={{fontSize:"1rem", width:"5rem"}} className='btn'><span>Log In</span></Button>

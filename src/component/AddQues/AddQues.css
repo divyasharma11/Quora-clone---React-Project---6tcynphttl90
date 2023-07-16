@@ -2,40 +2,50 @@
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-   background-color: whitesmoke;
-   height: 100vh;
+   /* background-color: whitesmoke; */
+   /* height: 100vh; */
 }
 .button-style{
     display: flex;
     justify-content: center;
-    /* margin-left: 20rem; */
-    /* margin-top: -4rem; */
+    margin-left: 20rem; 
+     margin-top: 10rem; 
 
 }
 
 .ques-card{
-   
-    margin-top: 6rem;
-    margin-left: 5rem;
     display: flex;
     flex-direction: row;
     background-color: white;
-    border: #bebdbd solid 1px;
+    /* border: #bebdbd solid 1px; */
     border-radius: 10px;
-    width: 40rem;
-    height: 20rem;
-    padding: 10px;
+    width: 30rem;
+    height: 10rem;
+   
+    /* padding: 10px; */
 }
 .input-ques{
-    width: 100%;
-    height: 20rem;
-    border-radius: 10px;
-    /* background-color: #f5909036; */
+    /* border-radius: 10px;
     border: none;
-    padding-left: 10px;
-  
+    outline: none;
+  padding-top: 50px; */
+  /* margin-left: 2rem; */
+  margin-top: 3rem; 
+  width: 47rem;
+  height: 15rem;
+  border: #cecaca solid 1px;
+  background: white;
+  border-radius: 1rem;
+  resize: none;
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+.input-ques::placeholder{
+    color: #989898e9;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
 }
 .heading{
-    margin-top: -5px;
+    margin-top: 5px;
     margin-right: 10px;
 }

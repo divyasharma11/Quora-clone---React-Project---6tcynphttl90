@@ -19,7 +19,7 @@ const Feed = () => {
     },
     {
       id: 2,
-      username: "Divya pandey",
+      username: "Divyanshu Agrawal",
       question: "When did the world war start?",
       answer: "The first world war started in 1914.",
     },

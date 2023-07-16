@@ -1,8 +1,7 @@
 .ans-container{
     display: flex;
     flex-direction: column;
-    background-color: whitesmoke;
-     height: 100vh;
+    
 }
 .ans-page{
     display: flex;
@@ -11,8 +10,8 @@
 .ans-btn{
     display: flex;
     justify-content: center;
-    margin-top: -6rem;
-    margin-left: 50rem;
+    /* margin-top: -5rem; */
+    margin-left: 15rem;
    
 }
 .selected-ques{
@@ -26,8 +25,8 @@
     margin-right: 3rem;
 }
 .ans-card{
-    margin-left: 5rem;
-    margin-top: 6rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
     width: 47rem;
     height: 15rem;
     border: #cecaca solid 1px;
@@ -41,6 +40,6 @@
     color: #989898e9;
     margin-top: 0.5rem;
     margin-left: 1rem;
-    font-size:xx-large;
+  
 
 }

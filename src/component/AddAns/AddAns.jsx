@@ -43,7 +43,7 @@ const AddAns=(props)=>{
         // console.log(props.quesAns);
 
         localStorage.setItem(`QuestionAnswer`,JSON.stringify(props.quesAns));
-        // alert("Answer Submitted!!")
+        alert("Answer Submitted!!")
         navigate('/Home');
         }
         else {
@@ -52,18 +52,20 @@ const AddAns=(props)=>{
 
     }
 
-
+    const closeModalHandler=()=>{
+        // navigate("/Home");
+        location.reload();
+    }
     return (
         <div>
             <div className="ans-container">
-                <Navbar />
             <p className="selected-ques">{element}</p>
                 <div className="ans-page">
                     <QuesList print={print} title={"Selection List"}/>
-                    <textarea type="text" className="ans-card" placeholder="Answer:" value={ans} onChange={(entered_ans) => setAns(entered_ans.target.value)}></textarea>
+                    <textarea type="text" className="ans-card" placeholder="Write Answer here:" value={ans} onChange={(entered_ans) => setAns(entered_ans.target.value)}></textarea>
                 </div> 
                  <div className="ans-btn">
-                    <Button onClick={()=>navigate('/Home')} style={{width:"5rem", fontSize:"1rem"}}>
+                    <Button onClick={closeModalHandler} style={{width:"5rem", fontSize:"1rem"}}>
                         <span>Cancel</span>
                     </Button>
                     <Button onClick={answerSubmit} style={{fontSize:"1rem"}} >

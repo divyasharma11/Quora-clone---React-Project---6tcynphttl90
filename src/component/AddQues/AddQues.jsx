@@ -3,7 +3,7 @@ import "./AddQues.css";
 import Button from "../ButtonComponent/Button";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import Navbar from '../Navbar/Navbar';
+
 
 const AddQues = (props) => {
     const navigate=useNavigate();
@@ -31,15 +31,19 @@ const AddQues = (props) => {
         }
 
     };
+    const closeModalHandler=()=>{
+        // navigate("/Home");
+        location.reload();
+    }
   return (
     <div className="add_ques-container">
-        <Navbar />
+        
     <div className="ques-card">
         <h1 className="heading">Question:</h1>
         <input type="text" className="input-ques" placeholder="Type Your Question Here................" value={Question} onChange={(e) => setQuestion(e.target.value)}></input>
     </div>
     <div className="button-style">
-        <Button onClick={()=>navigate('/Home')} style={{width:"4rem", fontSize:"1rem"}}>
+        <Button onClick={closeModalHandler} style={{width:"4rem", fontSize:"1rem"}}>
             <span>Cancel</span>
         </Button>
         <Button onClick={()=>ques_posted()} style={{fontSize:"1rem"}} >
