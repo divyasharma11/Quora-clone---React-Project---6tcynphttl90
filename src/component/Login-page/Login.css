@@ -119,4 +119,12 @@
   .login__footer > p:hover {
     text-decoration: underline;
   }
+
+  /* media queries */
+  /* @media (max-width: 576px){
+    .login{
+      width: 50%;
+      height: 20vh;
+    }
+  } */
   

@@ -6,6 +6,7 @@ import AddAns from "./component/AddAns/AddAns";
 import AddQues from "./component/AddQues/AddQues";
 import Register from "./component/Register/Register";
 import Navbar from "./component/Navbar/Navbar";
+import searchList from "./component/SearchList";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,6 +15,8 @@ function App() {
 
   const [quesAns, setQuesAns] = useState([]);
   const [search, setSearch] = useState("");
+
+  const [searchQuestion,setSearchQuestion]=useState(searchList)
 
   const [searchedQues, setSearchedQues] = useState("");
   const [searchedAns, setSearchedAns] = useState("");
@@ -27,13 +30,13 @@ function App() {
   //         setSearchedAns("So please submit your question")
   //   );
   // }
-
+console.log("hey divya",searchQuestion);
   return (
     <div>
       <BrowserRouter >
         <Routes>        
             <Route path="/" element={<Login/>}/>
-            <Route path="/Home" element={<Home search={search} setSearch={setSearch} searchedQues={searchedQues} searchedAns={searchedAns}  setSearchedQues={setSearchedQues} setSearchedAns={setSearchedAns}/>}/>
+            <Route path="/Home" element={<Home searchQuestion={searchQuestion} setSearchQuestion={setSearchQuestion} search={search} setSearch={setSearch} searchedQues={searchedQues} searchedAns={searchedAns}  setSearchedQues={setSearchedQues} setSearchedAns={setSearchedAns}/>}/>
             <Route path="/add_ques" element={<AddQues count={count} setCount={setCount} questionObj={questionObj} setQuestionObj={setQuestionObj}/>}/>
             <Route path="/ans_ques" element={<AddAns quesAns={quesAns} setQuesAns={setQuesAns}/>}/>
             <Route path="/register" element={<Register/>}/>

@@ -4,9 +4,10 @@
     margin-right: 1rem;
     width: 20rem;
    padding-left: 3rem;
-    height: 20rem;
+    height: 30rem;
     background-color: #fff;
     box-shadow: 0px 0px 2px rgb(190, 187, 187);
+    position: sticky;
 }
 .list{
     display: flex;
@@ -18,10 +19,16 @@
     cursor: pointer;
 }
 h2{
+    padding:10px ;
+    padding-right: 40px;
     text-align: center;
 }
-p{
-   
+
+.list p{
+   padding-top: 15px;
     height: fit-content;
     overflow-wrap: break-word;
+}
+.list p:hover{
+    color: red;
 }
