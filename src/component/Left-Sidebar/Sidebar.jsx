@@ -60,7 +60,7 @@ const Sidebar = () => {
         <p>Health</p>
       </div>
 
-      {/* <div className="sidebar">
+      <div className="sidebar">
         <img
           src="https://qph.cf2.quoracdn.net/main-thumb-t-843-100-W7FzODceTO2aQmp8D7E4rKZ8YgSv21eR.jpeg"
           alt=""
@@ -82,7 +82,7 @@ const Sidebar = () => {
           alt=""
         />
         <p>Education</p>
-  </div> */}
+  </div>
       <div className="sidebar">
         <Add />
         <p className="text">Discover Spaces</p>

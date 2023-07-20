@@ -32,3 +32,10 @@ h2{
 .list p:hover{
     color: red;
 }
+
+@media (max-width: 576px){
+    .QList{
+        width: 15rem;
+        margin-top: 10px;
+    }
+   }

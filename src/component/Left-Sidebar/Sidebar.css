@@ -44,4 +44,10 @@
     font-weight: 400;
     font-size: 13px;
   }
+  /* Media queries */
+@media (max-width: 576px) {
+  .sidebar-container{
+    display: none;
+  }
+}
   
