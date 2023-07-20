@@ -34,13 +34,13 @@ const AddQues = ({count,setCount,questionObj,setQuestionObj,}) => {
     <div className="add_ques-container">
       <div className="ques-card">
         <h1 className="heading">Question:</h1>
-        <input
-          type="text"
-          className="input-ques"
-          placeholder="Type Your Question Here................"
-          value={Question}
-          onChange={(e) => setQuestion(e.target.value)}
-        />
+         <textarea
+           type="text"
+           className="input-ques"
+           placeholder="Type Your Question Here................"
+           value={Question}
+           onChange={(e) => setQuestion(e.target.value)}
+          ></textarea>
       </div>
       <div className="button-style">
         <Button

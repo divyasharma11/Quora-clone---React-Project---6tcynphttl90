@@ -21,15 +21,8 @@
     border-radius: 10px;
     width: 30rem;
     height: 10rem;
-   
-    /* padding: 10px; */
 }
-.input-ques{
-    /* border-radius: 10px;
-    border: none;
-    outline: none;
-  padding-top: 50px; */
-  /* margin-left: 2rem; */
+/* .input-ques{
   margin-top: 3rem; 
   width: 47rem;
   height: 15rem;
@@ -44,8 +37,51 @@
     color: #989898e9;
     margin-top: 0.5rem;
     margin-left: 1rem;
+} */
+.input-ques{
+    margin-left: 2rem;
+    margin-top: 2rem;
+    width: 47rem;
+    height: 15rem;
+    border: #cecaca solid 1px;
+    background: white;
+    border-radius: 1rem;
+    resize: none;
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+.input-ques::placeholder{
+    color: #989898e9;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
 }
 .heading{
     margin-top: 5px;
     margin-right: 10px;
+}
+@media (max-width:576px){
+    .ques-card{
+        display: flex;
+        flex-direction: column;
+        margin-top: 5rem;
+        margin-left: 12rem;
+        width: 18rem;
+        height: 20rem;
+    }
+    .input-ques{
+   margin-left: .5rem;
+   padding: 1rem;
+    margin-top: 4rem;
+    width: 12rem;
+    height: 6rem;
+    }
+    .heading{
+        margin-top: 10px;
+        margin-left: 1rem;
+    }
+    .button-style{
+        position: absolute;
+        margin-left: 16rem; 
+        margin-top: 21rem;
+    }
 }

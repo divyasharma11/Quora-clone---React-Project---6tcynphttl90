@@ -86,7 +86,7 @@ const Navbar = ({
         >
          <span>Add questions</span>
         </Button>
-        <Modal
+        <Modal className="modal"
           isOpen={isQuesModalOpen}
           onClose={() => setIsQuesModalOpen(false)}
           style={{
