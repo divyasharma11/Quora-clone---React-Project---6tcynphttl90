@@ -23,7 +23,7 @@ const AddQues = (props) => {
         localStorage.setItem(`QuestionList`,JSON.stringify(props.questionObj));
         i++;
         props.setCount(i) 
-    //    alert("post successfull!!");
+       alert("post successfull!!");
         navigate('/Home');
         }
         else{

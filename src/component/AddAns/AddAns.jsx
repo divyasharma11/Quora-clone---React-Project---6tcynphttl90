@@ -61,7 +61,7 @@ const AddAns=(props)=>{
             <div className="ans-container">
             <p className="selected-ques">{element}</p>
                 <div className="ans-page">
-                    <QuesList print={print} title={"Selection List"}/>
+                    <QuesList className="qlist" print={print} title={"Selection List"}/>
                     <textarea type="text" className="ans-card" placeholder="Write Answer here:" value={ans} onChange={(entered_ans) => setAns(entered_ans.target.value)}></textarea>
                 </div> 
                  <div className="ans-btn">

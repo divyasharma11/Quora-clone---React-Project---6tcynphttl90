@@ -83,11 +83,11 @@ const Navbar = ({
           style={{ fontSize: "1rem" }}
           className="btn"
         >
-          <span>Add questions</span>
+         <span>Add questions</span>
         </Button>
         <Modal
           isOpen={isQuesModalOpen}
-          onClose={() => setIsQuesModalOpen(false)}
+          // onClose={() => setIsQuesModalOpen(false)}
           style={{
             overlay: {
               width: 700,

@@ -12,7 +12,7 @@ const QuesList = (props) => {
     { id: 5, question: "How did the world war start?" },
     { id: 6, question: "Difference between strees and strain?" },
     {id: 7,question: "How many hours are there in a day?" },
-    {id: 8,question: "What color is the sky?"},
+   
   ];
 
   localQuesList = JSON.parse(localStorage.getItem("QuestionList"));
