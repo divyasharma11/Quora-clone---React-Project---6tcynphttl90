@@ -128,3 +128,24 @@
   color: white
 
 }
+@media (max-width:576px){
+    .nav-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 35vh;
+    }
+    .navbar-logo{
+        margin-top: 5px;
+    }
+    .nav-icon .MuiSvgIcon-root{
+        font-size: x-large;
+    }
+   
+    .btn-container{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+       
+    }
+}

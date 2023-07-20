@@ -77,6 +77,7 @@ const Navbar = ({
           <Search className="search-btn" />
         </div>
       </div>
+      <div className="btn-container">
       <div>
         <Button
           onClick={() => setIsQuesModalOpen(true)}
@@ -139,6 +140,7 @@ const Navbar = ({
         >
           <span>Logout</span>
         </Button>
+      </div>
       </div>
     </div>
   );
