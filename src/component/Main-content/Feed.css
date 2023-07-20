@@ -60,5 +60,9 @@ span{
 @media (max-width: 576px){
     .feed-container{
         width: 20rem;
+        margin-left: 1rem;
+        margin-top: 2rem;
+        gap: .5rem;
+        margin-bottom: 2rem;
     }
    }
