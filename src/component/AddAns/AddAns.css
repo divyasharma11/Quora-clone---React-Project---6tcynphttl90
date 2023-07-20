@@ -39,6 +39,34 @@
     color: #989898e9;
     margin-top: 0.5rem;
     margin-left: 1rem;
-  
-
+}
+@media (max-width:576px){
+    .ans-container{
+        display: flex;
+        /* flex-direction: row; */
+        margin-top: 2rem;
+        margin-left:5rem;
+        width: 22rem;
+        height: 20rem;
+    }
+   
+    .ans-card{
+        height: 20rem;
+        margin-left: .2rem;
+         margin-top: 1rem;
+    }
+    .selected-ques{
+        margin-left: .2rem;
+    }
+    .ans-btn{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        margin-left: 13rem; 
+        margin-top: 23rem;
+    }
+    .qlist{
+        width: 2rem;
+    }
+    
 }
