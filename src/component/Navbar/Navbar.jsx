@@ -48,7 +48,7 @@ const Navbar = ({
       </div>
       <div className="nav-icons">
         <div className="active nav-icon">
-          <HomeIcon />
+          <HomeIcon onClick={()=>location.reload()}/>
         </div>
         <div className="nav-icon">
           <FeaturedPlayListIcon />
@@ -87,7 +87,7 @@ const Navbar = ({
         </Button>
         <Modal
           isOpen={isQuesModalOpen}
-          // onClose={() => setIsQuesModalOpen(false)}
+          onClose={() => setIsQuesModalOpen(false)}
           style={{
             overlay: {
               width: 700,
