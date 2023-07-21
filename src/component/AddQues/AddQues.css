@@ -58,12 +58,12 @@
    margin-left: .5rem;
    padding: 1rem;
     margin-top: 4rem;
-    width: 12rem;
-    height: 6rem;
+    width: 18rem;
+    height: 10rem;
     }
     .heading{
         margin-top: 10px;
-        margin-left: 1rem;
+        /* margin-left: 1rem; */
     }
     .button-style{
         /* position: absolute; */
