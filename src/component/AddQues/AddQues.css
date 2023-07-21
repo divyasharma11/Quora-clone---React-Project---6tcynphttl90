@@ -62,7 +62,7 @@
     height: 10rem; */
     height: 15rem;
     width: 20rem;
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
      margin-top: 1rem;
     }
     .heading{
@@ -72,6 +72,6 @@
     .button-style{
         /* position: absolute; */
         margin-left: 2rem; 
-        margin-top: 15rem;
+        margin-top: 25rem;
     }
 }
