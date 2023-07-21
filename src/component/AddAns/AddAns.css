@@ -8,9 +8,11 @@
     flex-direction: row;
 }
 .ans-btn{
+    position: absolute;
     display: flex;
     justify-content: center;
-    
+    margin-left:15rem ;
+    margin-top: 20rem;
 }
 
 .selected-ques{

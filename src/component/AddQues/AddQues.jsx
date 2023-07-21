@@ -12,7 +12,7 @@ const AddQues = ({count,setCount,questionObj,setQuestionObj,}) => {
   var i = count;
 
   const quesPosted = () => {
-    if (Question !== "" && Question.length) {
+    if (!Question == "") {
       var arryList = questionObj;
       arryList.unshift(Question);
       setQuestionObj(arryList);

@@ -2,7 +2,8 @@
     display: flex;
     justify-content: center;
     align-content: center;
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
+    background: url("https://qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.home_page_bg_desktop.png-26-4770753d59b970e1.png");
     height: 100vh;
 }
    .register {

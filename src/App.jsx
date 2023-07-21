@@ -5,7 +5,6 @@ import Home from "./component/Homepage/Homepage";
 import AddAns from "./component/AddAns/AddAns";
 import AddQues from "./component/AddQues/AddQues";
 import Register from "./component/Register/Register";
-import Navbar from "./component/Navbar/Navbar";
 import searchList from "./component/SearchList";
 
 function App() {
