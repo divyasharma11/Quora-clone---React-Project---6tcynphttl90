@@ -5,6 +5,7 @@ import Feed from "../Main-content/Feed";
 import "./Homepage.css";
 
 import QuesList from "../Right-Sidebar/QuesList";
+import Footer from "../footer/Footer";
 
 const Homepage = ({
   search,
@@ -32,6 +33,7 @@ const Homepage = ({
         />
         <QuesList title={"Question List"} className="right" />
       </div>
+        <Footer />
     </div>
   );
 };
