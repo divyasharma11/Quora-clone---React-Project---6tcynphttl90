@@ -4,31 +4,42 @@ import Button from "../ButtonComponent/Button";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-const AddQues = ({count,setCount,questionObj,setQuestionObj,}) => {
-  const navigate = useNavigate();
+const AddQues = (props) => {
+  const navigate=useNavigate();
 
-  const [Question, setQuestion] = useState("");
+  const [Ques,setQues]=useState('');
+  
 
-  var i = count;
+  //    console.log(localStorage.getItem("questionObj"));
 
-  const quesPosted = () => {
-    if (!Question == "") {
-      var arryList = questionObj;
-      arryList.unshift(Question);
-      setQuestionObj(arryList);
 
-      localStorage.setItem(`QuestionList`, JSON.stringify(questionObj));
+     var i=props.count;
+   
+  const ques_posted = () => {
+
+      if(!Ques==''){
+
+      var arryList=props.questionObj;
+      arryList.unshift(Ques);
+      props.setQuestionObj(arryList);
+
+      localStorage.setItem(`QuestionList`,JSON.stringify(props.questionObj));
       i++;
-      setCount(i);
-      alert("post successfull!!");
-      navigate("/Home");
-    } else {
-      alert("Please Enter Question");
-    }
+      props.setCount(i) 
+
+      navigate('/Home');
+      }
+      else{
+          alert("Please Enter Question")
+      }
+
   };
+
+
+
   const closeModalHandler = () => {
-    // navigate("/Home");
-     location.reload();
+    navigate("/Home");
+    //  location.reload();
   };
   return (
     <div className="add_ques-container">
@@ -38,8 +49,8 @@ const AddQues = ({count,setCount,questionObj,setQuestionObj,}) => {
            type="text"
            className="input-ques"
            placeholder="Type Your Question Here................"
-           value={Question}
-           onChange={(e) => setQuestion(e.target.value)}
+           value={Ques}
+           onChange={(e) => setQues(e.target.value)}
           ></textarea>
       </div>
       <div className="button-style">
@@ -49,7 +60,7 @@ const AddQues = ({count,setCount,questionObj,setQuestionObj,}) => {
         >
           <span>Cancel</span>
         </Button>
-        <Button onClick={() => quesPosted} style={{ fontSize: "1rem" }}>
+        <Button onClick={ques_posted} style={{fontSize:"1rem"}} >
           <span>Post Question</span>
         </Button>
       </div>

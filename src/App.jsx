@@ -20,15 +20,7 @@ function App() {
   const [searchedQues, setSearchedQues] = useState("");
   const [searchedAns, setSearchedAns] = useState("");
 
-  // function searching() {
-  //   var QuestionAnswerList = JSON.parse(localStorage.getItem("QuestionAnswer"));
-  //   QuestionAnswerList.map((data) =>
-  //     data.question === search
-  //       ? setSearchedQues(data.question) & setSearchedAns(data.answer)
-  //       : setSearchedQues("This question is not Found") &
-  //         setSearchedAns("So please submit your question")
-  //   );
-  // }
+
 console.log("hey divya",searchQuestion);
   return (
     <div>

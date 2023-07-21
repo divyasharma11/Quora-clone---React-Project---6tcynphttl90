@@ -14,6 +14,8 @@ import AddQues from "../AddQues/AddQues";
 import AddAns from "../AddAns/AddAns";
 import { Search } from "@mui/icons-material";
 
+Modal.setAppElement('#root');
+
 const Navbar = ({
   search,
   setSearch,
@@ -80,13 +82,14 @@ const Navbar = ({
       <div className="btn-container">
       <div>
         <Button
-          onClick={() => setIsQuesModalOpen(true)}
+          onClick={() => navigate('/add_ques')}
+          // onClick={()=>setIsQuesModalOpen(true)}
           style={{ fontSize: "1rem" }}
           className="btn"
         >
          <span>Add questions</span>
         </Button>
-        <Modal className="modal"
+        {/* <Modal className="modal"
           isOpen={isQuesModalOpen}
           onClose={() => setIsQuesModalOpen(false)}
           style={{
@@ -103,17 +106,18 @@ const Navbar = ({
           }}
         >
           <AddQues setIsModalOpen={setIsQuesModalOpen} />
-        </Modal>
+        </Modal> */}
       </div>
       <div>
         <Button
-          onClick={() => setIsAnsModalOpen(true)}
+          // onClick={() => setIsAnsModalOpen(true)}
+          onClick={()=>navigate('/ans_ques')}
           style={{ fontSize: "1rem" }}
           className="btn"
         >
           <span>Add answers</span>
         </Button>
-        <Modal
+        {/* <Modal
           isOpen={isAnsModalOpen}
           onClose={() => setIsAnsModalOpen(false)}
           style={{
@@ -130,7 +134,7 @@ const Navbar = ({
           }}
         >
           <AddAns setIsAnsModalOpen={setIsAnsModalOpen} />
-        </Modal>
+        </Modal> */}
       </div>
       <div>
         <Button

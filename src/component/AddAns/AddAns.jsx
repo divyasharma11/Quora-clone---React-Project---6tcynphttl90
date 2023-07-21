@@ -4,7 +4,7 @@ import QuesList from "../Right-Sidebar/QuesList";
 import Button from "../ButtonComponent/Button";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import Navbar from "../Navbar/Navbar";
+
 
 const AddAns = (props) => {
   const navigate = useNavigate();
@@ -41,15 +41,19 @@ const AddAns = (props) => {
   }
 
   const closeModalHandler = () => {
-    // navigate("/Home");
-    location.reload();
+    navigate("/Home");
+    // location.reload();
   };
   return (
     <div>
+
       <div className="ans-container">
-        <p className="selected-ques">{element}</p>
         <div className="ans-page">
+        <p className="selected-ques">{element}</p>
           <QuesList className="qlist" print={print} title={"Selection List"} />
+          </div>
+          <div className="input-container">
+          <h1>Add Answere:</h1>
           <textarea
             type="text"
             className="ans-card"
@@ -57,8 +61,9 @@ const AddAns = (props) => {
             value={ans}
             onChange={(entered_ans) => setAns(entered_ans.target.value)}
           ></textarea>
-        </div>
-        <div className="ans-btn">
+          </div>
+          <div className="ans-btn">
+       
           <Button
             onClick={closeModalHandler}
             style={{ width: "5rem", fontSize: "1rem" }}
@@ -69,6 +74,7 @@ const AddAns = (props) => {
             <span>Post Answer</span>
           </Button>
         </div>
+       
       </div>
     </div>
   );

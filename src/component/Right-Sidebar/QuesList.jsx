@@ -1,6 +1,7 @@
 import React from "react";
 import "./QuesList.css";
 const QuesList = (props) => {
+
   let localQuesList = [];
 
   let quesList = [
@@ -21,7 +22,7 @@ const QuesList = (props) => {
     <div className="QList">
       <h2>{props.title}</h2>
       <div className="list">
-        {localQuesList &&
+      {localQuesList &&
           localQuesList.map((e, index) => (
             <span className="span-tags" key={index}>
               <p onClick={() => props.print(e)} className="ptag">
@@ -29,7 +30,7 @@ const QuesList = (props) => {
               </p>
             </span>
           ))}
-
+          
         {quesList &&
           quesList.map((data) => (
             <span className="span-tags" key={data.id}>
@@ -38,6 +39,7 @@ const QuesList = (props) => {
               </p>
             </span>
           ))}
+          
       </div>
     </div>
   );
