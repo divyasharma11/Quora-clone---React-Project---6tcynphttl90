@@ -53,7 +53,7 @@ const AddAns = (props) => {
           <QuesList className="qlist" print={print} title={"Selection List"} />
           </div>
           <div className="input-container">
-          <h1>Add Answere:</h1>
+          <h1>Add Answer:</h1>
           <textarea
             type="text"
             className="ans-card"
