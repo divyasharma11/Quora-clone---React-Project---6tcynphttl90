@@ -44,8 +44,6 @@ const AddQues = (props) => {
     //  location.reload();
   };
   return (
-    <>
-    <Navbar />
     <div className="add_ques-container">
       <div className="ques-card">
         <h1 className="heading">Question:</h1>
@@ -69,7 +67,7 @@ const AddQues = (props) => {
         </Button>
       </div>
     </div>
-   </>
+  
   );
 };
 
