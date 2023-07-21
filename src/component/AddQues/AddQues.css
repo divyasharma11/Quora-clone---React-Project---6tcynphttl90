@@ -55,11 +55,15 @@
         height: 20rem;
     }
     .input-ques{
-   margin-left: .5rem;
+   /* margin-left: .5rem;
    padding: 1rem;
     margin-top: 4rem;
     width: 16rem;
-    height: 10rem;
+    height: 10rem; */
+    height: 15rem;
+    width: 20rem;
+    margin-left: 1rem;
+     margin-top: 1rem;
     }
     .heading{
         margin-top: 10px;
@@ -68,6 +72,6 @@
     .button-style{
         /* position: absolute; */
         margin-left: 2rem; 
-        margin-top: 2rem;
+        margin-top: 15rem;
     }
 }
