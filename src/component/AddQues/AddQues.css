@@ -61,8 +61,8 @@
     width: 16rem;
     height: 10rem; */
     height: 15rem;
-    width: 20rem;
-    /* margin-left: 1rem; */
+    width: 18rem;
+    margin-left: .2rem;
      margin-top: 1rem;
     }
     .heading{
@@ -72,6 +72,6 @@
     .button-style{
         /* position: absolute; */
         margin-left: 2rem; 
-        margin-top: 25rem;
+        margin-top: 45rem;
     }
 }
