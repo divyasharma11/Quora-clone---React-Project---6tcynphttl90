@@ -1,0 +1,35 @@
+.qa-container{
+  height: 100vh;
+ /* background-color: whitesmoke; */
+ display: flex;
+ justify-content: center;
+    align-items: center;
+}
+ .h1{
+  padding-right: 60rem;
+  font-style: italic;
+}
+.q1{
+    width: 40rem;
+    height: 35rem;
+    background-color: #fff;
+    box-shadow: 0px 0px 2px rgb(190, 187, 187);
+}
+.htag{
+    margin-top: 10px;
+    margin-left: 10px;
+    color: black;
+}
+.ptag{
+    margin-left: 10px;
+}
+@media (max-width:576px){
+   
+    .h1{
+        font-size: 18px;
+        text-align: center;
+        margin-top: 3rem;
+        margin-left: 3rem;
+        margin-bottom: 1rem;
+    }
+}

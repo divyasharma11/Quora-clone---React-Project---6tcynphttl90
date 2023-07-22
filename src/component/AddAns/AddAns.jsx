@@ -23,7 +23,7 @@ const AddAns = (props) => {
 
   function answerSubmit() {
     if (!ans == "") {
-      obj.question = element;
+      obj.question =element;
       obj.answer = ans;
 
       var QuestioAnswerList = props.quesAns;
@@ -34,7 +34,7 @@ const AddAns = (props) => {
 
       localStorage.setItem(`QuestionAnswer`, JSON.stringify(props.quesAns));
       alert("Answer Submitted!!");
-      navigate("/Home");
+      navigate("/home");
     } else {
       alert("Please Enter Answer");
     }

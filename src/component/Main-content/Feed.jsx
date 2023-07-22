@@ -4,13 +4,14 @@ import { Avatar } from "@mui/material";
 
 const Feed = ({ searchQuestion, setSearchQuestion }) => {
   let quesAnsList = [];
-  let questionList= [];
+  // let questionList= [];
   
   quesAnsList = JSON.parse(localStorage.getItem("QuestionAnswer"));
-  questionList = JSON.parse(localStorage.getItem("QuestionList"));
+  // questionList = JSON.parse(localStorage.getItem("QuestionList"));
   
   return (
     <div className="feed-container">
+        
       {/* {quesAnsList &&
         quesAnsList.map((e, index) => (
           <div className="inner-ques-card">
@@ -18,6 +19,7 @@ const Feed = ({ searchQuestion, setSearchQuestion }) => {
             <p>{e.answer}</p>
           </div>
         ))} */}
+         
       {searchQuestion &&
         searchQuestion.map((data) => (
           <div className="inner-ques-card" key={data.id}>

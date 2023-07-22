@@ -11,7 +11,6 @@ const AddQues = (props) => {
 
   const [Ques,setQues]=useState('');
   
-
   //    console.log(localStorage.getItem("questionObj"));
 
 
@@ -29,7 +28,7 @@ const AddQues = (props) => {
       i++;
       props.setCount(i) 
 
-      navigate('/Home');
+      navigate('/home');
       }
       else{
           alert("Please Enter Question")
@@ -40,7 +39,7 @@ const AddQues = (props) => {
 
 
   const closeModalHandler = () => {
-    navigate("/Home");
+    navigate("/home");
     //  location.reload();
   };
   return (

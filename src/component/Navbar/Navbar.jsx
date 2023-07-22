@@ -50,10 +50,10 @@ const Navbar = ({
       </div>
       <div className="nav-icons">
         <div className="active nav-icon">
-          <HomeIcon onClick={()=>location.reload()}/>
+          <HomeIcon onClick={()=>navigate('./home')}/>
         </div>
         <div className="nav-icon">
-          <FeaturedPlayListIcon />
+          <FeaturedPlayListIcon  onClick={()=>navigate('/quesanspage')}/>
         </div>
         <div className="nav-icon">
           <AssignmentTurnedInIcon />
