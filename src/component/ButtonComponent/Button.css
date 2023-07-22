@@ -12,8 +12,11 @@
     cursor: pointer;
 }
 .btn:hover{
-    background-color: rgb(160, 54, 50);
-    color:rgb(255, 255, 255) ;
+    border: 2px solid rgb(179, 23, 18) ;
+    /* background-color: rgb(100, 16, 14); */
+    background-color: #fff;
+    /* color:rgb(255, 255, 255) ; */
+    color: black;
 }
 @media (max-width:576px){
     .btn{

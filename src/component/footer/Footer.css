@@ -1,12 +1,18 @@
 .footer {
-    height: 40px;
+    height: 60px;
     background-color: #ffffff;
     display: flex;
     justify-content: center;
     box-shadow: 8px 0px 7px rgba(0,0,0,0.1);
     align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .copyright {
     color: #8f1f1b;
+}
+.footer .MuiSvgIcon-root{
+    color: #8f1f1b;
+    padding: 10px;
 }

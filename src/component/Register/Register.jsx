@@ -4,6 +4,7 @@ import Button from "../ButtonComponent/Button";
 import { useNavigate } from "react-router-dom";
 
 const Register = () => {
+  
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',

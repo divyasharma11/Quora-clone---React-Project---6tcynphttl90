@@ -33,6 +33,43 @@ const QuesAns = () => {
           <p className="ptag">Ans. 
             The final of the 1983 the West Indies at Lord's on 25 June 1983.
           </p>
+             <h3 className="htag" >Ques. When was India won the first World Cup?</h3>
+          <p className="ptag">Ans. 
+            The final of the 1983 the West Indies at Lord's on 25 June 1983.
+          </p>
+             <h3 className="htag" >Ques. When was India won the first World Cup?</h3>
+          <p className="ptag">Ans. 
+            The final of the 1983 the West Indies at Lord's on 25 June 1983.
+          </p>
+             <h3 className="htag" >Ques. When was India won the first World Cup?</h3>
+          <p className="ptag">Ans. 
+            The final of the 1983 the West Indies at Lord's on 25 June 1983.
+          </p>
+             <h3 className="htag" >Ques. When was India won the first World Cup?</h3>
+          <p className="ptag">Ans. 
+            The final of the 1983 the West Indies at Lord's on 25 June 1983.
+          </p>
+             <h3 className="htag" >Ques. When was India won the first World Cup?</h3>
+          <p className="ptag">Ans. 
+            The final of the 1983 the West Indies at Lord's on 25 June 1983.
+          </p>
+             <h3 className="htag" >Ques. When was India won the first World Cup?</h3>
+          <p className="ptag">Ans. 
+            The final of the 1983 the West Indies at Lord's on 25 June 1983.
+          </p>
+             <h3 className="htag" >Ques. When was India won the first World Cup?</h3>
+          <p className="ptag">Ans. 
+            The final of the 1983 the West Indies at Lord's on 25 June 1983.
+          </p>
+             <h3 className="htag" >Ques. When was India won the first World Cup?</h3>
+          <p className="ptag">Ans. 
+            The final of the 1983 the West Indies at Lord's on 25 June 1983.
+          </p>
+             <h3 className="htag" >Ques. When was India won the first World Cup?</h3>
+          <p className="ptag">Ans. 
+            The final of the 1983 the West Indies at Lord's on 25 June 1983.
+          </p>
+            
         </div>
       </div>
      
