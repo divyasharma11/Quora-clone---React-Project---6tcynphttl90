@@ -4,40 +4,12 @@ import { useNavigate } from "react-router-dom";
 import {getItem} from "../../getUser"
 import { TextField } from "@mui/material";
 import logo from "../../assets/googleLogo.png";
-// import quora from "../../assets/Quora-Logo.png";
+// import { signInWithPopup } from "firebase/auth";
+// import { auth, provider } from "../../firebase";
 import emailLogo from "../../assets/Email-logo.png";
 const Login = () => {
   const navigate = useNavigate();
 
-//   const handleSignIn = (e) => {
-//     e.preventDefault();
-//      localStorage.setItem("Loggedin",true)
-//     navigate("/Home");
-//   };
-//   const [email,setEmail]=useState("");
-// const [password,setPassword]=useState("");
-// const [isEmailValid,setIsEmailValid]=useState(true);
-// const [isPasswordValid,setIsPasswordValid]=useState(true);
-    
-// const validateEmail = (email)=>{
-//     const regex =/\S+@\S+\.\S+/;
-//     return regex.test(email);
-// }
-// const validatePassword=(password)=>{
-//     return password.length >= 8;
-// }
-// const handleEmailChange=(e)=>{
-//     const newEmail= e.target.value;
-//     setEmail(newEmail);
-//     setIsEmailValid(validateEmail(newEmail));
-// }
-// const handlePasswordChange=(e)=>{
-//     const newPassword= e.target.value;
-//     setPassword(newPassword);
-//     setIsPasswordValid(validatePassword(newPassword));
-// }
-
-// const isFormValid=isEmailValid && isPasswordValid;
 const userRef = useRef(getItem("user"));
 const [loginDetails, setLoginDetails] = useState({
   email: "",
@@ -138,11 +110,11 @@ const handleLoginDetails = (event) => {
         </div>
         <div className="loginContent">
           <div className="leftSide">
-            {/* <div className="termsAndConditions">
+            <div className="termsAndConditions">
               By continuing you indicate that you agree to Quora's {" "}
-              <span className="condition"> Terms of Service </span> and {" "}
+              <span className="condition"> Terms of Service </span>and {" "}
               <span className="condition">Privacy Policy</span>.
-            </div> */}
+            </div>
 
             <div className="leftSideBtn">
               <button
@@ -204,47 +176,6 @@ const handleLoginDetails = (event) => {
             </form>
           </div>
         </div>
-        {/* <div className="login-form">
-          <div className="login-tittle">
-            <h4>Login</h4>
-          </div>
-          <div className="login-inputfield">
-            <div className="login-input">
-              <input
-                    type="text"
-                    id="email"
-                    value={email}
-                    onChange={handleEmailChange}
-                    placeholder="Email"
-                />
-           <div id='validation'  style={{color:"red"}} className={isEmailValid? 'valid' : 'invalid'} >
-                {isEmailValid ? '' : 'invalid email'}</div>
-            </div>
-            <div className="login-input">
-             
-              <input
-                    type="text"
-                    id="password"
-                    value={password}
-                    onChange={handlePasswordChange}
-                    placeholder="Password"
-                />
-                <div id='validation' style={{color:"red"}} className={isPasswordValid? 'valid' : 'invalid'}>
-                {isPasswordValid ? '' : 'invalid password'}</div>
-            </div>
-            </div>
-          
-          <div className="login-forget">
-            <small>Forgot Password?</small>
-            
-            <button type="submit" onClick={handleSignIn} disabled={!isFormValid}>
-                Login
-            </button>
-          </div>
-         
-          <button onClick={() => navigate("/register")}>Register</button>
-        </div> */}
-
         <div className="login__footer">
           <p>About</p>
           <p>Languages</p>

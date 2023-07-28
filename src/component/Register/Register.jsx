@@ -37,7 +37,7 @@ const Register = () => {
     if (name.length < 3) {
       formErrors.name = 'name must be at least 3 characters.';
     }
-    if (email.match(emailPattern)) {
+    if (!email.match(emailPattern)) {
       formErrors.email = 'email is invalid.';
     }
     if (password.length<6 ) {

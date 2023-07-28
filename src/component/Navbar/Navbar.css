@@ -39,27 +39,15 @@
     color: #b92b27;
 }
  .nav-input{
-    /* display: flex;
-    align-items: center;
-    border: 1px solid lightgray;
-    padding: 5px;
-    border-radius: 5px;
-    margin-left: 5px;*/
     position: relative;
     margin-right: 30px;
 } 
 .nav-input .search-questions{
-    /* background-color: transparent;
-    outline: none;
-    border: none;
-    color: rgb(49,49,49); */
     padding: 15px;
     height: 5px;
     width: 100%;
     font-size: 16px;
-   
     border: 1px solid #c62828;
-    /* border-bottom: 3px solid #c62828; */
     border-radius: 5px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
 }
@@ -105,6 +93,8 @@
 }
 .btn-container{
     display: flex;
+    justify-content: space-evenly;
+    margin-right: 2rem;
 }
 @media (max-width:576px){
     .nav-container{
