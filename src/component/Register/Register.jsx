@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Register.css";
 import Button from "../ButtonComponent/Button";
 import { useNavigate } from "react-router-dom";
@@ -17,9 +17,10 @@ const Register = () => {
     email: '',
     password: '',
   });
+  const {name,email,password}=formData;
 
   const [success, setSuccess] = useState(false);
-
+  const [registered, setRegistered] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -31,20 +32,28 @@ const Register = () => {
   const handleClick = (e) => {
     e.preventDefault();
     const formErrors = {};
-
+    const emailPattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
     // Validation checks
-    if (!formData.name) {
-      formErrors.name = 'name is required.';
+    if (name.length < 3) {
+      formErrors.name = 'name must be at least 3 characters.';
     }
-    if (!formData.email) {
-      formErrors.email = 'email is required.';
+    if (email.match(emailPattern)) {
+      formErrors.email = 'email is invalid.';
     }
-    if (!formData.password) {
-      formErrors.password = 'password is required.';
-    } else if (formData.password.length < 4) {
-      formErrors.password = 'Password must be at least 4 characters long.';
+    if (password.length<6 ) {
+      formErrors.password = 'Password must be at least 6 characters long.';
     }
-  
+    if (name.length >= 3 && email.match(emailPattern) && password.length >= 6) {
+      localStorage.setItem(
+        "user",
+        JSON.stringify({
+          username: name,
+          email: email,
+          password: password,
+        })
+      );
+    }
+
     if (Object.keys(formErrors).length > 0) {
       setErrors(formErrors);
     } else {
@@ -62,8 +71,15 @@ const Register = () => {
         password: '',
       });
     }
-   
+    setRegistered(true);
   };
+  useEffect(() => {
+    if (registered) {
+      setTimeout(() => {
+        navigate("/");
+      }, 1000);
+    }
+  }, [registered]);
 
   return (
     <div>
@@ -79,7 +95,7 @@ const Register = () => {
               type="email"
               id="email"
               name="email"
-              value={formData.email}
+              value={email}
               onChange={handleChange}
               required
             />
@@ -92,7 +108,7 @@ const Register = () => {
               type="text"
               id="name"
               name="name"
-              value={formData.name}
+              value={name}
               onChange={handleChange}
               required
             />
@@ -105,11 +121,11 @@ const Register = () => {
               type="password"
               id="password"
               name="password"
-              value={formData.password}
+              value={password}
               onChange={handleChange}
               required
             />
-             {errors.password && <p style={{color:"red"}} className="error-message">{errors.password}</p>}
+          {errors.password && <p style={{color:"red"}} className="error-message">{errors.password}</p>}
           </div>
           <div>
             <Button

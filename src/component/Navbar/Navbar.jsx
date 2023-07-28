@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useState } from "react";
 import "./Navbar.css";
-
+import { getItem } from "../../getUser";
 import HomeIcon from "@mui/icons-material/Home";
 import FeaturedPlayListIcon from "@mui/icons-material/FeaturedPlayList";
 import AssignmentTurnedInIcon from "@mui/icons-material/AssignmentTurnedIn";
@@ -14,8 +14,6 @@ import AddQues from "../AddQues/AddQues";
 import AddAns from "../AddAns/AddAns";
 import { Search } from "@mui/icons-material";
 
-Modal.setAppElement('#root');
-
 const Navbar = ({
   search,
   setSearch,
@@ -24,6 +22,7 @@ const Navbar = ({
   setSearchQuestion,
 }) => {
   const navigate = useNavigate();
+  const userRef = useRef(getItem("user"));
   const [isQuesModalOpen, setIsQuesModalOpen] = useState(false);
   const [isAnsModalOpen, setIsAnsModalOpen] = useState(false);
 
@@ -40,6 +39,24 @@ const Navbar = ({
     setSearchQuestion(queAnsFilter);
     // }
   };
+  const handleLogout =()=>{
+    // if (window.confirm("Do you want to Logout?")) {
+    //   auth
+    //     .signOut()
+    //     .then(() => {
+    //       navigate("/");
+    //       window.location.reload();
+    //       localStorage.setItem(
+    //         "user",
+    //         JSON.stringify({ ...userRef.current, islogged: false })
+    //       );
+    //     })
+    //     .catch((error) => {
+    //       console.log(error);
+    //     });
+    // }
+    navigate("/");
+  }
   return (
     <div className="nav-container">
       <div className="navbar-logo">
@@ -50,19 +67,19 @@ const Navbar = ({
       </div>
       <div className="nav-icons">
         <div className="active nav-icon">
-          <HomeIcon onClick={()=>navigate('./home')}/>
+          <HomeIcon onClick={()=>navigate('/home')}/>
         </div>
         <div className="nav-icon">
           <FeaturedPlayListIcon  onClick={()=>navigate('/quesanspage')}/>
         </div>
         <div className="nav-icon">
-          <AssignmentTurnedInIcon />
+          <AssignmentTurnedInIcon onClick={()=>navigate('/question-container')} />
         </div>
         <div className="nav-icon">
-          <PeopleAltIcon />
+          <PeopleAltIcon onClick={()=>navigate('/discover')}/>
         </div>
         <div className="nav-icon">
-          <NotificationsIcon />
+          <NotificationsIcon onClick={()=>navigate('/discover')} />
         </div>
       </div>
       <div className="nav-input">
@@ -138,7 +155,7 @@ const Navbar = ({
       </div>
       <div>
         <Button
-          onClick={() => navigate("/")}
+          onClick={handleLogout}
           style={{ fontSize: "1rem", width: "5rem" }}
           className="btn"
         >

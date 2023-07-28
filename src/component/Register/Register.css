@@ -8,8 +8,8 @@
 }
    .register {
     margin-top: 6rem;
-    width: 25rem;
-    height: 18rem;
+    width: 35rem;
+    height: 25rem;
     border: #cecaca solid 1px;
     background: white;
     border-radius: 1rem;
@@ -21,10 +21,11 @@
 }
 
 .input-style-register{
-    width: 14rem;
+    width: 20rem;
     height: 2rem;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     border: none;
+    border-bottom: 1px solid rgb(233, 90, 85);
     padding-left: 10px;
     margin-bottom:1rem;
 }

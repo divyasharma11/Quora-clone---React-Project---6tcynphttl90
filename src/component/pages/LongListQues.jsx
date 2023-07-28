@@ -1,5 +1,5 @@
 import React from "react";
-import "./QuesList.css";
+import "../Right-Sidebar/QuesList.css";
 import Navbar from "../Navbar/Navbar";
 import Sidebar from "../Left-Sidebar/Sidebar";
 const QuesList = (props) => {
@@ -21,6 +21,12 @@ const QuesList = (props) => {
   localQuesList = JSON.parse(localStorage.getItem("QuestionList"));
 
   return (
+    <>
+    <Navbar />
+    <div className="main">
+    <div>
+      <Sidebar />
+    </div>
     <div className="QList">
       <h2>{props.title}</h2>
       <div className="list">
@@ -44,6 +50,8 @@ const QuesList = (props) => {
           
       </div>
     </div>
+    </div>
+    </>
   );
 };
 
