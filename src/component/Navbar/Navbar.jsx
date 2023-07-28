@@ -73,7 +73,7 @@ const Navbar = ({
           <FeaturedPlayListIcon  onClick={()=>navigate('/quesanspage')}/>
         </div>
         <div className="nav-icon">
-          <AssignmentTurnedInIcon onClick={()=>navigate('/question-container')} />
+          <AssignmentTurnedInIcon  onClick={()=>navigate('/ans_ques')} />
         </div>
         <div className="nav-icon">
           <PeopleAltIcon onClick={()=>navigate('/discover')}/>
@@ -106,26 +106,8 @@ const Navbar = ({
         >
          <span>Add questions</span>
         </Button>
-        {/* <Modal className="modal"
-          isOpen={isQuesModalOpen}
-          onClose={() => setIsQuesModalOpen(false)}
-          style={{
-            overlay: {
-              width: 700,
-              height: 500,
-              backgroundColor: "rgba(0,0,0,0.8)",
-              zIndex: "1000",
-              top: "50%",
-              left: "50%",
-              marginTop: "-200px",
-              marginLeft: "-350px",
-            },
-          }}
-        >
-          <AddQues setIsModalOpen={setIsQuesModalOpen} />
-        </Modal> */}
       </div>
-      <div>
+      {/* <div>
         <Button
           // onClick={() => setIsAnsModalOpen(true)}
           onClick={()=>navigate('/ans_ques')}
@@ -134,25 +116,7 @@ const Navbar = ({
         >
           <span>Add answers</span>
         </Button>
-        {/* <Modal
-          isOpen={isAnsModalOpen}
-          onClose={() => setIsAnsModalOpen(false)}
-          style={{
-            overlay: {
-              width: 700,
-              height: 500,
-              backgroundColor: "rgba(0,0,0,0.8)",
-              zIndex: "1000",
-              top: "50%",
-              left: "50%",
-              marginTop: "-200px",
-              marginLeft: "-350px",
-            },
-          }}
-        >
-          <AddAns setIsAnsModalOpen={setIsAnsModalOpen} />
-        </Modal> */}
-      </div>
+      </div> */}
       <div>
         <Button
           onClick={handleLogout}

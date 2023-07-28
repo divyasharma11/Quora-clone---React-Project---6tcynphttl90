@@ -27,7 +27,9 @@ const QuesList = (props) => {
       {localQuesList &&
           localQuesList.map((e, index) => (
             <span className="span-tags" key={index}>
-              <p onClick={() => props.print(e)} className="ptag">
+              <p 
+              // onClick={() => props.print(e)} 
+              className="ptag">
                 {e}
               </p>
             </span>
@@ -36,7 +38,9 @@ const QuesList = (props) => {
         {quesList &&
           quesList.map((data) => (
             <span className="span-tags" key={data.id}>
-              <p onClick={() => props.print(data.question)} className="ptag">
+              <p
+              //  onClick={() => props.print(data.question)} 
+              className="ptag">
                 {data.question}
               </p>
             </span>

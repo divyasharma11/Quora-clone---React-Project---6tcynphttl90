@@ -8,9 +8,10 @@
     flex-direction: row;
     /* margin-top: 50px; */
   }
-
+   
   @media (max-width: 576px){
    .home-content{
     flex-direction: column;
    }
+
   }

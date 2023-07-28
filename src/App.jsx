@@ -22,8 +22,8 @@ function App() {
   const [count, setCount] = useState(0);
 
   const [questionObj, setQuestionObj] = useState([]);
-
-  const [quesAns, setQuesAns] = useState([]);
+  
+  const [quesAns, setQuesAns] = useState( []);
   const [search, setSearch] = useState("");
 
   const [searchQuestion,setSearchQuestion]=useState(searchList)
@@ -39,7 +39,7 @@ function App() {
             <Route path="/" element={<Login/>}/>
             <Route path="/home" element={<Home searchQuestion={searchQuestion} setSearchQuestion={setSearchQuestion} search={search} setSearch={setSearch} searchedQues={searchedQues} searchedAns={searchedAns}  setSearchedQues={setSearchedQues} setSearchedAns={setSearchedAns}/>}/>
             <Route path="/add_ques" element={<AddQues quesAns={quesAns} setQuesAns={setQuesAns} count={count} setCount={setCount} questionObj={questionObj} setQuestionObj={setQuestionObj}/>}/>
-            <Route path="/ans_ques" element={<AddAns quesAns={quesAns} setQuesAns={setQuesAns}/>}/>
+            <Route path="/ans_ques" element={<AddAns quesAns={quesAns} setQuesAns={setQuesAns} questionObj={questionObj}  />}/>
             <Route path="/question-list" element={<LongListQues/>}/>
             <Route path="/question-container" element={<QuesContainer/>}/>
             <Route path="/register" element={<Register />}/>

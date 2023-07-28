@@ -4,12 +4,12 @@ import "./QuesAns.css";
 import Sidebar from "../Left-Sidebar/Sidebar";
 
 
-const QuesAns = () => {
-  let quesAnsList = [];
-  let questionList = [];
+const QuesAns = (props) => {
+  // let quesAnsList = [];
+  
 
-  quesAnsList = JSON.parse(localStorage.getItem("QuestionAnswer"));
-  questionList = JSON.parse(localStorage.getItem("QuestionList"));
+  let quesAnsList = JSON.parse(localStorage.getItem("QuestionAnswer"));
+  
   return (
     <>
       <Navbar />
@@ -19,63 +19,43 @@ const QuesAns = () => {
       </div>
       <div className="qa-container">
         <div className="q1">
-          {questionList &&
-            questionList.map((e, index) => (
-              <span className="span-tags" key={index}>
-                <p className="htag">
-                  <h3>Ques. {e}</h3>
-                </p>
-              </span>
-            ))}
-          {quesAnsList &&
+            <div className="small">
+             <h3 className="htag" >Ques. When was India won the first World Cup?</h3>
+          <p className="ptag">Ans. 
+            The final of the 1983 the West Indies at Lord's on 25 June 1983.
+          </p>
+          </div>
+            <div className="small">
+             <h3 className="htag" >Ques. When was India won the first World Cup?</h3>
+          <p className="ptag">Ans. 
+            The final of the 1983 the West Indies at Lord's on 25 June 1983.
+          </p>
+          </div>
+            <div className="small">
+             <h3 className="htag" >Ques. When was India won the first World Cup?</h3>
+          <p className="ptag">Ans. 
+            The final of the 1983 the West Indies at Lord's on 25 June 1983.
+          </p>
+          </div>
+            <div className="small">
+             <h3 className="htag" >Ques. When was India won the first World Cup?</h3>
+          <p className="ptag">Ans. 
+            The final of the 1983 the West Indies at Lord's on 25 June 1983.
+          </p>
+          </div>
+            <div className="small">
+             <h3 className="htag" >Ques. When was India won the first World Cup?</h3>
+          <p className="ptag">Ans. 
+            The final of the 1983 the West Indies at Lord's on 25 June 1983.
+          </p>
+          </div>
+          {  quesAnsList &&
             quesAnsList.map((e, index) => (
-              <div key={index}>
+              <div key={index}  className="small">
+                 <h3 className="htag">Ques. {e.question}</h3>
                 <p className="ptag">Ans. {e.answer}</p>
               </div>
             ))}
-            <div className="small">
-             <h3 className="htag" >Ques. When was India won the first World Cup?</h3>
-          <p className="ptag">Ans. 
-            The final of the 1983 the West Indies at Lord's on 25 June 1983.
-          </p>
-          </div>
-            <div className="small">
-             <h3 className="htag" >Ques. When was India won the first World Cup?</h3>
-          <p className="ptag">Ans. 
-            The final of the 1983 the West Indies at Lord's on 25 June 1983.
-          </p>
-          </div>
-            <div className="small">
-             <h3 className="htag" >Ques. When was India won the first World Cup?</h3>
-          <p className="ptag">Ans. 
-            The final of the 1983 the West Indies at Lord's on 25 June 1983.
-          </p>
-          </div>
-            <div className="small">
-             <h3 className="htag" >Ques. When was India won the first World Cup?</h3>
-          <p className="ptag">Ans. 
-            The final of the 1983 the West Indies at Lord's on 25 June 1983.
-          </p>
-          </div>
-            <div className="small">
-             <h3 className="htag" >Ques. When was India won the first World Cup?</h3>
-          <p className="ptag">Ans. 
-            The final of the 1983 the West Indies at Lord's on 25 June 1983.
-          </p>
-          </div>
-            <div className="small">
-             <h3 className="htag" >Ques. When was India won the first World Cup?</h3>
-          <p className="ptag">Ans. 
-            The final of the 1983 the West Indies at Lord's on 25 June 1983.
-          </p>
-          </div>
-            <div className="small">
-             <h3 className="htag" >Ques. When was India won the first World Cup?</h3>
-          <p className="ptag">Ans. 
-            The final of the 1983 the West Indies at Lord's on 25 June 1983.
-          </p>
-          </div>
-             
             
         </div>
       </div>
