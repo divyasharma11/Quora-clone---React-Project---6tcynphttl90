@@ -237,13 +237,13 @@
     .navbar-logo img {
       margin-top: 5px;
       margin-left: 1rem;
-      padding-right: 3rem; 
+      /* padding-right: 3rem;  */
     }
   
     .nav-icons {
       justify-content: space-between;
       margin-top: 1rem; 
-      padding-right: 5rem;
+      /* padding-right: 5rem; */
     }
   
     .nav-icon .MuiSvgIcon-root {
@@ -253,14 +253,14 @@
   
     .nav-input {
       margin-top: 1rem; 
-      padding-right: 4rem;
+      /* padding-right: 4rem; */
     }
   
     .btn-container {
       /* margin-top: 10px; */
       justify-content: space-evenly;
       margin-right: 1rem;
-      padding-right: 3rem;
+      /* padding-right: 3rem; */
     }
     .btn{
      font-size: 15px !important;
