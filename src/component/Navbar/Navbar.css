@@ -141,12 +141,12 @@
      font-size: 15px !important;
      padding: 5px;
     }
-    /* .nav-input .search-btn {
-     left: 200px;
-    } */
+    .nav-input .search-btn {
+     left: 15rem;
+    }
   
     /* .search-questions {
-     width: 2rem;
+     width: 8rem;
     } */
   }
   
