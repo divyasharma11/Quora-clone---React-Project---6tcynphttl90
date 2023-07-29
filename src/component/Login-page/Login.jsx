@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 import {getItem} from "../../getUser"
 import { TextField } from "@mui/material";
 import logo from "../../assets/googleLogo.png";
-// import { signInWithPopup } from "firebase/auth";
-// import { auth, provider } from "../../firebase";
+import { signInWithPopup } from "firebase/auth";
+import { auth, provider } from "../../firebase";
 import emailLogo from "../../assets/Email-logo.png";
 const Login = () => {
   const navigate = useNavigate();

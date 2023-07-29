@@ -9,10 +9,8 @@ import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import Button from "../ButtonComponent/Button";
 import { useNavigate } from "react-router-dom";
-import Modal from "react-modal";
-import AddQues from "../AddQues/AddQues";
-import AddAns from "../AddAns/AddAns";
 import { Search } from "@mui/icons-material";
+import { auth } from "../../firebase";
 
 const Navbar = ({
   search,
@@ -40,22 +38,21 @@ const Navbar = ({
     // }
   };
   const handleLogout =()=>{
-    // if (window.confirm("Do you want to Logout?")) {
-    //   auth
-    //     .signOut()
-    //     .then(() => {
-    //       navigate("/");
-    //       window.location.reload();
-    //       localStorage.setItem(
-    //         "user",
-    //         JSON.stringify({ ...userRef.current, islogged: false })
-    //       );
-    //     })
-    //     .catch((error) => {
-    //       console.log(error);
-    //     });
-    // }
-    navigate("/");
+    if (window.confirm("Do you want to Logout?")) {
+      auth
+        .signOut()
+        .then(() => {
+          navigate("/");
+          window.location.reload();
+          localStorage.setItem(
+            "user",
+            JSON.stringify({ ...userRef.current, islogged: false })
+          );
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
   }
   return (
     <div className="nav-container">
