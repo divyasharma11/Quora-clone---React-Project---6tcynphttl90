@@ -71,6 +71,7 @@ span{
   }
   
   .inner-ques-card {
+    margin-left: 4rem;
     display: flex;
     flex-direction: column;
     height: fit-content;

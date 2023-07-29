@@ -93,12 +93,12 @@ span{
   }
   
   .avatar {
-    color: white;
-    background-color: rgb(170, 28, 28);
-    font-size: 10px;
+    color: white !important;
+    background-color:rgb(170, 28, 28) !important;
+    font-size: 10px !important;
     margin-right: 5px;
-    height: 35px;
-    width: 35px;
+    height: 35px !important;
+    width: 35px !important;
   }
   
   .heading {
