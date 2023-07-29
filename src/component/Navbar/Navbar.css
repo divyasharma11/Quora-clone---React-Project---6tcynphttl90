@@ -136,13 +136,14 @@
       justify-content: space-evenly;
       margin-right: 1rem;
       margin-top: 1rem;
+      margin-bottom: 10px;
     }
     .btn{
      font-size: 15px !important;
      padding: 5px;
     }
     .nav-input .search-btn {
-     left: 15rem;
+     left: 14rem;
     }
   
     /* .search-questions {
