@@ -74,6 +74,8 @@ const AddAns = (props) => {
     { id: 5, question: "How did the world war start?" },
     { id: 6, question: "Difference between strees and strain?" },
     {id: 7,question: "How many hours are there in a day?" },
+    {id: 8,question: "What do you think the meaning of life is?" },
+    {id: 9,question: "If money were no object, what would you do?" },
    
   ];
 
@@ -91,8 +93,6 @@ const AddAns = (props) => {
       <Navbar />
       <div className="ans-container">
         <div className="ans-page">
-          {/* <p className="selected-ques">{element}</p> */}
-          {/* <QuesList className="qlist" handleQueAns={handleQueAns} title={"Selection List"} /> */}
           <div className="QList">
             <h2>Selection List</h2>
             <div className="list">
@@ -103,14 +103,12 @@ const AddAns = (props) => {
                       onClick={() =>
                         handleQueAns(
                           e.question,
-                          // question.questionedBy,
                           index
                         )
                       }
                       className={`questionAns ptag ${
                         selectedQuestionIndex === index ? "active" : ""
                       }`}
-                      // className="ptag"
                     >
                       {e}
                     </p>
@@ -120,19 +118,16 @@ const AddAns = (props) => {
               {quesList &&
                 quesList.map((data, index) => (
                   <span className="span-tags" key={data.id}>
-                    {/* <p onClick={() => props.print(data.question)} className="ptag"> */}
                     <p
                       onClick={() =>
                         handleQueAns(
                           data.question,
-                          // question.questionedBy,
                           index
                         )
                       }
                       className={`questionAns ptag ${
                         selectedQuestionIndex === index ? "active" : ""
                       }`}
-                      // className="ptag" 
                     >
                       {data.question}
                     </p>
@@ -141,8 +136,8 @@ const AddAns = (props) => {
             </div>
           </div>
         </div>
+        <div>
         <div className="input-container">
-          <h1>Add Answer:</h1>
           <textarea
             type="text"
             ref={inputRef}
@@ -162,6 +157,7 @@ const AddAns = (props) => {
           <Button onClick={answerSubmit} style={{ fontSize: "1rem" }}>
             <span>Post Answer</span>
           </Button>
+        </div>
         </div>
       </div>
     </div>

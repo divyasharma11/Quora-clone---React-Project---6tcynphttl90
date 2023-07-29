@@ -15,6 +15,8 @@ const QuesList = (props) => {
     { id: 5, question: "How did the world war start?" },
     { id: 6, question: "Difference between strees and strain?" },
     {id: 7,question: "How many hours are there in a day?" },
+    {id: 8,question: "What do you think the meaning of life is?" },
+    {id: 9,question: "If money were no object, what would you do?" },
    
   ];
 
@@ -27,8 +29,7 @@ const QuesList = (props) => {
       {localQuesList &&
           localQuesList.map((e, index) => (
             <span className="span-tags" key={index}>
-              <p 
-              // onClick={() => props.print(e)} 
+              <p  
               className="ptag">
                 {e}
               </p>
@@ -38,8 +39,7 @@ const QuesList = (props) => {
         {quesList &&
           quesList.map((data) => (
             <span className="span-tags" key={data.id}>
-              <p
-              //  onClick={() => props.print(data.question)} 
+              <p 
               className="ptag">
                 {data.question}
               </p>

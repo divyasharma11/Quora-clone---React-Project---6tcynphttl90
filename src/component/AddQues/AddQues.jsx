@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../footer/Footer";
+import Sidebar from "../Left-Sidebar/Sidebar";
 
 const AddQues = (props) => {
   const navigate=useNavigate();
@@ -40,12 +41,12 @@ const AddQues = (props) => {
 
   const closeModalHandler = () => {
     navigate("/home");
-    //  location.reload();
   };
   return (
+    <>
+    <Navbar />
     <div className="add_ques-container">
       <div className="ques-card">
-        <h1 className="heading">Question:</h1>
          <textarea
            type="text"
            className="input-ques"
@@ -66,7 +67,7 @@ const AddQues = (props) => {
         </Button>
       </div>
     </div>
-  
+    </>
   );
 };
 

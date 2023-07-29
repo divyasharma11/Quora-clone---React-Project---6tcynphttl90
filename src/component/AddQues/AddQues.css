@@ -1,35 +1,26 @@
 .add_ques-container{
     display: flex;
-    flex-wrap: nowrap;
     flex-direction: column;
-   /* background-color: whitesmoke; */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 90vh;
+   background-color: whitesmoke;
 }
 .button-style{
     display: flex;
-    position: absolute;
-    justify-content: center;
-    margin-left: 20rem; 
-     margin-top: 23rem; 
+
 }
 
 .ques-card{
     display: flex;
-    flex-direction: row;
-    background-color: white;
-    /* border: #bebdbd solid 1px; */
-    border-radius: 10px;
-    width: 40rem;
-    height: 28rem;
-    margin: 2rem;
+   justify-content: center;
 }
 .input-ques{
-  margin-top: 3rem; 
-  margin-right: 2rem;
   width: 47rem;
-  height: 15rem;
+  height: 25rem;
   border: #cecaca solid 1px;
   background: white;
-  border-radius: 1rem;
   resize: none;
   padding-left: 1rem;
   padding-top: 1rem;
@@ -39,15 +30,8 @@
     margin-top: 0.5rem;
     margin-left: 1rem;
 }
-
-.heading{
-    margin-top: 1rem;
-    margin-left: 2rem;
-    /* margin-right: 10px; */
-}
 @media (max-width:576px){
     .ques-card{
-        display: flex;
         flex-direction: column;
         margin-top: 5rem;
         width: 18rem;
@@ -59,12 +43,7 @@
     margin-left: .2rem;
      margin-top: 1rem;
     }
-    .heading{
-        margin-top: 10px;
-        /* margin-left: 1rem; */
-    }
     .button-style{
-        /* position: absolute; */
         margin-left: 3rem; 
         margin-top: 27rem;
     }

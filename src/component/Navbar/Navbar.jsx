@@ -66,19 +66,19 @@ const Navbar = ({
         />
       </div>
       <div className="nav-icons">
-        <div className="active nav-icon">
+        <div className="active nav-icon" title="Home">
           <HomeIcon onClick={()=>navigate('/home')}/>
         </div>
-        <div className="nav-icon">
+        <div className="nav-icon" title="Question-Answer-List">
           <FeaturedPlayListIcon  onClick={()=>navigate('/quesanspage')}/>
         </div>
-        <div className="nav-icon">
+        <div className="nav-icon" title="Add-Answer">
           <AssignmentTurnedInIcon  onClick={()=>navigate('/ans_ques')} />
         </div>
-        <div className="nav-icon">
+        <div className="nav-icon" title="Discovery">
           <PeopleAltIcon onClick={()=>navigate('/discover')}/>
         </div>
-        <div className="nav-icon">
+        <div className="nav-icon" title="Notification">
           <NotificationsIcon onClick={()=>navigate('/discover')} />
         </div>
       </div>
@@ -90,7 +90,6 @@ const Navbar = ({
           value={search}
           onChange={inputHandler}
           placeholder="   Search question here..."
-          // onKeyDown={searchHandler}
         />
         <div onClick={searchHandler}>
           <Search className="search-btn" />
@@ -100,7 +99,6 @@ const Navbar = ({
       <div>
         <Button
           onClick={() => navigate('/add_ques')}
-          // onClick={()=>setIsQuesModalOpen(true)}
           style={{ fontSize: "1rem" }}
           className="btn"
         >
