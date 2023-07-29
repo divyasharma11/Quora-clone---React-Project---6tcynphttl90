@@ -26,12 +26,12 @@ const Homepage = ({
         setSearchedQues={setSearchedQues}
       />
       <div className="home-content">
-        <Sidebar className="left" />
+        <Sidebar  />
         <Feed
           setSearchQuestion={setSearchQuestion}
           searchQuestion={searchQuestion}
         />
-        <QuesList title={"Question List"} className="right" />
+        <QuesList title={"Question List"} className="right"/>
       </div>
         <Footer />
     </div>
