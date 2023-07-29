@@ -11,7 +11,7 @@ const Feed = ({ searchQuestion, setSearchQuestion }) => {
     <div className="post-container">    
       {searchQuestion &&
         searchQuestion.map((data) => (
-          <div className="inner-ques-card" key={data.id}>
+          <div className="inner-ques-card1" key={data.id}>
             <div className="avatar-box">
               <Avatar className="avatar" />
               <h2 className="h2">{data.username}</h2>
