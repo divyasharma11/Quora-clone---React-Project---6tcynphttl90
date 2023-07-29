@@ -1,4 +1,4 @@
-.ans-container{
+/* .ans-container{
     display: flex;
     flex-direction: row;
     background-color: whitesmoke;
@@ -61,4 +61,78 @@
         margin-top: 20rem;
     }
     
-}
+} */
+/* gpt */
+.ans-container {
+    display: flex;
+    flex-direction: row;
+    background-color: whitesmoke;
+  }
+  
+  .ans-card {
+    margin-left: 2rem;
+    margin-top: 2rem;
+    width: 40rem;
+    height: 25rem;
+    border: #cecaca solid 1px;
+    background: white;
+    resize: none;
+    padding-left: 1rem;
+    padding-top: 1rem;
+  }
+  
+  .ans-card::placeholder {
+    color: #989898e9;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+  }
+  
+  .ans-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .selected-ques {
+    margin-left: 10rem;
+    margin-top: 5rem;
+    font-size: xx-large;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+    height: auto;
+    margin-bottom: -5rem;
+    margin-right: 3rem;
+  }
+  
+  .questionAns.active {
+    color: red;
+  }
+  
+  @media (max-width: 576px) {
+    .ans-container {
+      flex-direction: column;
+      align-items: center;
+      padding-right: 2rem;
+    }
+  
+    .ans-card {
+      width: 100%;
+      max-width: 20rem;
+      height: 10rem;
+      margin-left: .1rem;
+      margin-top: 1rem;
+    }
+  
+    .selected-ques {
+      margin-left: 0.2rem;
+      margin-top: 1rem;
+      margin-bottom: 0;
+      margin-right: 0;
+      text-align: center;
+    }
+  
+    .ans-btn {
+      margin-top: 1rem;
+    }
+  }
+  

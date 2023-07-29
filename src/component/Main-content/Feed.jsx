@@ -8,7 +8,7 @@ const Feed = ({ searchQuestion, setSearchQuestion }) => {
   quesAnsList = JSON.parse(localStorage.getItem("QuestionAnswer"));
   
   return (
-    <div className="feed-container">    
+    <div className="post-container">    
       {searchQuestion &&
         searchQuestion.map((data) => (
           <div className="inner-ques-card" key={data.id}>

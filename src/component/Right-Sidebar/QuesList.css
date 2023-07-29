@@ -35,7 +35,7 @@ h2{
 
 @media (max-width: 576px){
     .QList{
-        width: 15rem;
+        width: fit-content;
         margin-top: 10px;
         margin-bottom: 20px;
         margin-left: 1rem;
