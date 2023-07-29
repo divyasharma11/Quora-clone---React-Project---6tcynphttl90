@@ -69,12 +69,13 @@
   
   @media (max-width: 576px) {
     .feed-container {
-      width: 100%;
+      width:fit-content;
       padding: 1rem;
     }
   
     .inner-ques-card {
       padding: 0.8rem;
+      margin-left: .5rem;
     }
 
     .inner-ques-card img{
