@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
+import Footer from "../footer/Footer"
 import "./QuesAns.css";
 import Sidebar from "../Left-Sidebar/Sidebar";
 
@@ -60,6 +61,7 @@ const QuesAns = (props) => {
         </div>
       </div>
       </div>
+      <Footer />
     </>
   );
 };

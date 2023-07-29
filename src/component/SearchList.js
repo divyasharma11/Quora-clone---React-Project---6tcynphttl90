@@ -15,8 +15,8 @@
     {
       id: 2,
       username: "Divyanshu Agrawal",
-      question: "When did the world war start?",
-      answer: "The first world war started in 1914.",
+      question: "What is the best gift you have ever given? ",
+      answer: "From puppies to home-made blankets and hugs, our readers tell us about the best present they've ever given or been gifted.",
     },
     {
       id: 3,

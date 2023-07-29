@@ -81,17 +81,19 @@
   @media (max-width: 576px) {
     .post-container{
       width: fit-content;
-      /* width: 20rem; */
-      margin-left: 1.5rem;
-      padding: 10px;
-      margin-top: 2rem;
+      margin-top: 2rem !important;
+      margin: .1rem;
+      /* gap: 0.5rem; */
+      /* margin-left: .5rem; */
+      /* padding: 10px; */
+      /* margin-top: 2rem;
       gap: 0.5rem;
-      margin-bottom: 2rem;
+      margin-bottom: 2rem; */
     }
   
     .inner-ques-card1{
       padding: 0.8rem;
-      width: fit-content;
+      /* width: 100%; */
     }
   
     .avatar {

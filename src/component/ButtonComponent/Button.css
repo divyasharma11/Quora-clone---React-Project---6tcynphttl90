@@ -1,29 +1,4 @@
-/* .btn{
-    margin: 2rem;
-    display: flex;
-    justify-content: space-between;
-    border-radius: 7px;
-    border: none;
-   text-align: center;
-   padding-left: 22px;
-    background-color: rgb(179, 23, 18);
-    color:rgb(255, 255, 255);
-    cursor: pointer;
-}
-.btn:hover{
-    border: 2px solid rgb(179, 23, 18) ;
-    background-color: #fff;
-    color: black;
-}
-@media (max-width:576px){
-    .btn{
-        width: 6rem;
-        height: 2.3rem;
-        font-size: 15px;
-        margin-left: 1rem;
-    }
-} */
-/* CSS for the .btn class */
+
 .btn {
     margin: 2rem;
     display: inline-flex;
@@ -32,12 +7,11 @@
     border-radius: 7px;
     border: none;
     text-align: center;
-    padding: 0 22px;
+    padding: 0 25px;
     height: 40px; 
     background-color: rgb(179, 23, 18);
     color: rgb(255, 255, 255);
     cursor: pointer;
-    text-decoration: none;
   }
   
   .btn:hover {
@@ -49,11 +23,11 @@
   /* Media query for devices with a maximum width of 576px */
   @media (max-width: 576px) {
     .btn {
-      width: 100%; 
+      width: fit-content;
       height: 40px; 
       font-size: 15px;
       margin: 0.5rem; 
-      padding: 0 15px;
+      /* padding: 0 22px; */
     }
   }
   
