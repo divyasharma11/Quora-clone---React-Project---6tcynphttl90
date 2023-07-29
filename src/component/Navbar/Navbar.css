@@ -114,7 +114,7 @@
     }
 
     .navbar-logo img {
-      margin-top: 5px;
+      margin-top: 1rem;
       margin-left: 1rem;
     }
   
@@ -135,17 +135,18 @@
     .btn-container {
       justify-content: space-evenly;
       margin-right: 1rem;
+      margin-top: 1rem;
     }
     .btn{
      font-size: 15px !important;
      padding: 5px;
     }
-    .nav-input .search-btn {
-      left: 220px; 
-    }
+    /* .nav-input .search-btn {
+     left: 200px;
+    } */
   
-    .search-questions {
-      width: 8rem; 
-    }
+    /* .search-questions {
+     width: 2rem;
+    } */
   }
   
