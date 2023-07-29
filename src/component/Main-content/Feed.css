@@ -82,18 +82,11 @@
     .post-container{
       width: fit-content;
       margin-top: 2rem !important;
-      margin: .1rem;
-      /* gap: 0.5rem; */
-      /* margin-left: .5rem; */
-      /* padding: 10px; */
-      /* margin-top: 2rem;
-      gap: 0.5rem;
-      margin-bottom: 2rem; */
+      margin: .2rem;
     }
   
     .inner-ques-card1{
       padding: 0.8rem;
-      /* width: 100%; */
     }
   
     .avatar {
