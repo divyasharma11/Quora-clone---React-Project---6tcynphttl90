@@ -4,7 +4,8 @@ import Button from "../ButtonComponent/Button";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Navbar from "../Navbar/Navbar";
-import Footer from "../footer/Footer"
+import Footer from "../footer/Footer";
+
 const AddAns = (props) => {
   const navigate = useNavigate();
   const [ans, setAns] = useState("");
