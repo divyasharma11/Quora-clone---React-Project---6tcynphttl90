@@ -3,18 +3,22 @@
     display: flex;
     flex-direction: row;
     background-color: whitesmoke;
+    justify-content: space-evenly;
   }
   
   .ans-card {
     margin-left: 2rem;
     margin-top: 2rem;
-    width: 40rem;
-    height: 25rem;
-    border: #cecaca solid 1px;
+    width: 35rem;
+    height: 31rem;
+    border: 1px solid rgb(168, 42, 42);
+    /* border: #cecaca solid 1px; */
     background: white;
     resize: none;
     padding-left: 1rem;
     padding-top: 1rem;
+    border-radius: 7px;
+    box-shadow: 0px 5px 6px 2px rgb(190, 187, 187);
   }
   
   .ans-card::placeholder {
@@ -43,7 +47,20 @@
   .questionAns.active {
     color: red;
   }
-  
+  .select_quest_List{
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 30rem;
+    height: fit-content;
+    background-color: #fff;
+    box-shadow: 0px 5px 6px 2px rgb(190, 187, 187);
+   padding-bottom: 3rem;
+   border-radius: 7px;
+  }
+  .select_quest_List h2{
+    color: rgb(179, 23, 18);
+  }
   @media (max-width: 576px) {
     .ans-container {
       flex-direction: column;

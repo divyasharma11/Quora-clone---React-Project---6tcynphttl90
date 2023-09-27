@@ -7,9 +7,9 @@ import logo from "../../assets/googleLogo.png";
 import { signInWithPopup } from "firebase/auth";
 import { auth, provider } from "../../firebase";
 import emailLogo from "../../assets/Email-logo.png";
-const Login = () => {
-  const navigate = useNavigate();
 
+const Login = () => {
+const navigate = useNavigate();
 const userRef = useRef(getItem("user"));
 const [loginDetails, setLoginDetails] = useState({
   email: "",
@@ -20,8 +20,6 @@ const emailRef = useRef(null);
 const passwordRef = useRef(null);
 const emailErrorRef = useRef(null);
 const passwordErrorRef = useRef(null);
-
-
 
 const { email, password } = loginDetails;
 
@@ -49,6 +47,7 @@ const handleLogin = (event) => {
     window.location.reload();
   }
 };
+
 const googleLogin = (event) => {
   event.preventDefault();
   signInWithPopup(auth, provider)

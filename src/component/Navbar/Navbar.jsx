@@ -7,10 +7,14 @@ import FeaturedPlayListIcon from "@mui/icons-material/FeaturedPlayList";
 import AssignmentTurnedInIcon from "@mui/icons-material/AssignmentTurnedIn";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import NotificationsIcon from "@mui/icons-material/Notifications";
-import Button from "../ButtonComponent/Button";
+import button from "../ButtonComponent/Button";
 import { useNavigate } from "react-router-dom";
 import { Search } from "@mui/icons-material";
 import { auth } from "../../firebase";
+import { Avatar } from "@mui/material";
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 
 const Navbar = ({
   search,
@@ -54,6 +58,14 @@ const Navbar = ({
         });
     }
   }
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
   return (
     <div className="nav-container">
       <div className="navbar-logo">
@@ -94,13 +106,13 @@ const Navbar = ({
       </div>
       <div className="btn-container">
       <div>
-        <Button
+        <button
           onClick={() => navigate('/add_ques')}
           style={{ fontSize: "1rem" }}
           className="btn"
         >
          <span>Add questions</span>
-        </Button>
+        </button>
       </div>
       {/* <div>
         <Button
@@ -112,17 +124,29 @@ const Navbar = ({
           <span>Add answers</span>
         </Button>
       </div> */}
-      <div>
         <Button
-          onClick={handleLogout}
-          style={{ fontSize: "1rem", width: "5rem" }}
-          className="btn"
-        >
-          <span>Logout</span>
-        </Button>
+        id="basic-button"
+        aria-controls={open ? 'basic-menu' : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? 'true' : undefined}
+        onClick={handleClick}
+      >
+          <Avatar />  
+      </Button>
+         <Menu
+        id="basic-menu"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        MenuListProps={{
+          'aria-labelledby': 'basic-button',
+        }}
+      >
+        <MenuItem>{userRef.current?.username}</MenuItem>
+        <MenuItem onClick={handleLogout}>Logout</MenuItem>
+      </Menu>
       </div>
       </div>
-    </div>
   );
 };
 

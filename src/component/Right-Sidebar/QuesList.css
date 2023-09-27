@@ -1,15 +1,17 @@
 .QList{
-    margin-top: 2rem;
-    margin-left: 3rem;
-    margin-right: 1rem;
-    width: 20rem;
-   padding-left: 2rem;
-    height: 35rem;
+   top: 0.1px;
+   margin-left: 1rem;
+    right: 1rem;
+    width: 50rem;
+    height: fit-content;
     background-color: #fff;
-    box-shadow: 0px 0px 2px rgb(190, 187, 187);
-    position: sticky;
+    box-shadow: 0px 5px 6px 2px rgb(190, 187, 187);
+    position: relative;
+    padding-bottom: 6rem;
 }
+
 .list{
+    padding: 2rem;
     display: flex;
     flex-direction: column;
    padding-bottom: 1rem;
@@ -22,6 +24,7 @@ h2{
     padding:10px ;
     padding-right: 40px;
     text-align: center;
+    color: rgb(179, 23, 18);
 }
 
 .list p{

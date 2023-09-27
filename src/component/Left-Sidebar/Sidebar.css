@@ -6,9 +6,10 @@
     /* margin-right: .5rem; */
     position: sticky;
     width: 18rem;
-    height: 38rem;
+    height: fit-content;
     background-color: #fff;
     box-shadow: 0px 0px 2px rgb(190, 187, 187);
+    padding-bottom: 4rem;
   }
   .sidebar {
     display: flex;

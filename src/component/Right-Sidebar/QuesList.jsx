@@ -24,24 +24,24 @@ const QuesList = (props) => {
 
   return (
     <div className="QList">
-      <h2>{props.title}</h2>
+      <h2>Question List</h2>
+      <hr />
       <div className="list">
       {localQuesList &&
           localQuesList.map((e, index) => (
             <span className="span-tags" key={index}>
               <p  
               className="ptag">
-                {e}
+              Q.  {e}
               </p>
             </span>
           ))}
-          
         {quesList &&
           quesList.map((data) => (
             <span className="span-tags" key={data.id}>
               <p 
               className="ptag">
-                {data.question}
+              Q. {data.question}
               </p>
             </span>
           ))}

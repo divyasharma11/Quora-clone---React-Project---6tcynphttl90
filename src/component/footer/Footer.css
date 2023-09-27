@@ -1,5 +1,5 @@
 .footer {
-    height: 60px;
+    height: fit-content;
     background-color: #ffffff;
     display: flex;
     justify-content: center;
@@ -10,6 +10,9 @@
 }
 
 .copyright {
+    margin-top: 1rem;
     color: #8f1f1b;
+    margin: 1rem;
 }
+
 

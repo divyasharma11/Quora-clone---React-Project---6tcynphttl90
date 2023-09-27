@@ -31,7 +31,7 @@ const Homepage = ({
           setSearchQuestion={setSearchQuestion}
           searchQuestion={searchQuestion}
         />
-        <QuesList title={"Question List"} className="right"/>
+        {/* <QuesList title={"Question List"} className="right"/> */}
       </div>
         <Footer />
     </div>

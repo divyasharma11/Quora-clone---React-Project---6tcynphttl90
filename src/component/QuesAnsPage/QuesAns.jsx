@@ -3,12 +3,11 @@ import Navbar from "../Navbar/Navbar";
 import Footer from "../footer/Footer"
 import "./QuesAns.css";
 import Sidebar from "../Left-Sidebar/Sidebar";
+import QuesList from "../Right-Sidebar/QuesList";
 
 
 const QuesAns = (props) => {
-  // let quesAnsList = [];
   
-
   let quesAnsList = JSON.parse(localStorage.getItem("QuestionAnswer"));
   
   return (
@@ -19,7 +18,8 @@ const QuesAns = (props) => {
       <Sidebar />
       </div>
       <div className="qa-container">
-        <div className="q1">
+        <QuesList />
+        {/* <div className="q1">
             <div className="small">
              <h3 className="htag" >Ques. When was India won the first World Cup?</h3>
           <p className="ptag">Ans. 
@@ -58,7 +58,7 @@ const QuesAns = (props) => {
               </div>
             ))}
             
-        </div>
+        </div> */}
       </div>
       </div>
       <Footer />

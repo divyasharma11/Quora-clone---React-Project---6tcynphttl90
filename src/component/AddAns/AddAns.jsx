@@ -4,7 +4,7 @@ import Button from "../ButtonComponent/Button";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Navbar from "../Navbar/Navbar";
-
+import Footer from "../footer/Footer"
 const AddAns = (props) => {
   const navigate = useNavigate();
   const [ans, setAns] = useState("");
@@ -93,28 +93,10 @@ const AddAns = (props) => {
       <Navbar />
       <div className="ans-container">
         <div className="ans-page">
-          <div className="QList">
+          <div className="select_quest_List">
             <h2>Selection List</h2>
+            <hr />
             <div className="list">
-              {localQuesList &&
-                localQuesList.map((e, index) => (
-                  <span className="span-tags" key={index}>
-                    <p
-                      onClick={() =>
-                        handleQueAns(
-                          e.question,
-                          index
-                        )
-                      }
-                      className={`questionAns ptag ${
-                        selectedQuestionIndex === index ? "active" : ""
-                      }`}
-                    >
-                      {e}
-                    </p>
-                  </span>
-                ))}
-
               {quesList &&
                 quesList.map((data, index) => (
                   <span className="span-tags" key={data.id}>
@@ -133,6 +115,25 @@ const AddAns = (props) => {
                     </p>
                   </span>
                 ))}
+                 {localQuesList &&
+                localQuesList.map((e, index) => (
+                  <span className="span-tags" key={index}>
+                    <p
+                      onClick={() =>
+                        handleQueAns(
+                          e.question,
+                          index
+                        )
+                      }
+                      className={`questionAns ptag ${
+                        selectedQuestionIndex === index ? "active" : ""
+                      }`}
+                    >
+                      {e}
+                    </p>
+                  </span>
+                ))}
+
             </div>
           </div>
         </div>
@@ -160,6 +161,7 @@ const AddAns = (props) => {
         </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
