@@ -11,7 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 const AddAns = (props) => {
   const navigate = useNavigate();
   const [ans, setAns] = useState("");
-  
+  const [answerAdded, setAnswerAdded] = useState(false);
   const [selectedQue, setSelectedQue] = useState({
     question: "",
     questionedBy: "",
@@ -43,8 +43,8 @@ const AddAns = (props) => {
         progress: undefined,
         theme: "light",
       });
+      setAnswerAdded(true);
       localStorage.setItem(`QuestionAnswer`, JSON.stringify(updatedQuestionAnswer));
-      // navigate("/home");
     } else {
       toast.error("Please select a question from the questions list and write your answer.!", {
         position: "top-right",
@@ -58,7 +58,14 @@ const AddAns = (props) => {
       });
     }
   }
- 
+
+  useEffect(() => {
+    if (answerAdded) {
+      setTimeout(() => {
+        navigate("/home");
+      }, 3500);
+    }
+  }, [answerAdded]);
   const closeModalHandler = () => {
     navigate("/Home");
   };

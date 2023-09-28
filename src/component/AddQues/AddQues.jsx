@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./AddQues.css";
 import Button from "../ButtonComponent/Button";
 import { useNavigate } from "react-router-dom";
@@ -11,7 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const AddQues = (props) => {
   const navigate=useNavigate();
-
+ const[quesAdded,setQuesAdded]=useState(false);
   const [Ques,setQues]=useState('');
 
      var i=props.count;
@@ -37,10 +37,9 @@ const AddQues = (props) => {
         progress: undefined,
         theme: "light",
       });
-      // navigate('/home');
+      setQuesAdded(true);
       }
       else{
-          // alert("Please Enter Question")
           toast.error("Please Enter Question!", {
             position: "top-right",
             autoClose: 3000,
@@ -52,10 +51,15 @@ const AddQues = (props) => {
             theme: "light",
           });
       }
-
   };
 
-
+  useEffect(() => {
+    if (quesAdded) {
+      setTimeout(() => {
+        navigate("/home");
+      }, 3500);
+    }
+  }, [quesAdded]);
 
   const closeModalHandler = () => {
     navigate("/home");
