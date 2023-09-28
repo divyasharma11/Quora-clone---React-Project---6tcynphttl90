@@ -16,7 +16,7 @@
     padding: 1rem;
     background-color: #fff;
     border-bottom: 1px solid #b91c16;
-    box-shadow: 0px 0px 2px rgb(190, 187, 187);
+    box-shadow: 0px 5px 6px 2px rgb(190, 187, 187);
     margin-left: 3rem;
   }
   .inner-ques-card img{
@@ -69,7 +69,8 @@
   @media (max-width: 768px) {
     .feed-container {
       /* width:fit-content; */
-      padding: 10px;
+      padding: 20px;
+      margin: 1rem;
     }
     .inner-ques-card img{
       width: 300px;
