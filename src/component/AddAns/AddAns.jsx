@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../footer/Footer";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const AddAns = (props) => {
   const navigate = useNavigate();
@@ -30,14 +32,33 @@ const AddAns = (props) => {
       props.setQuesAns(updatedQuestionAnswer);
       setAns("");
       setSelectedQuestionIndex(null);
-      alert("Answer added");
+
+      toast.success("Answere added successfully!", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       localStorage.setItem(`QuestionAnswer`, JSON.stringify(updatedQuestionAnswer));
-      navigate("/home");
+      // navigate("/home");
     } else {
-      alert("Please select a question from the questions list and write your answer.");
+      toast.error("Please select a question from the questions list and write your answer.!", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     }
   }
-  
+ 
   const closeModalHandler = () => {
     navigate("/Home");
   };
@@ -68,6 +89,7 @@ const AddAns = (props) => {
 
   return (
     <div>
+       <ToastContainer />
       <Navbar />
       <div className="ans-container">
         <div className="ans-page">

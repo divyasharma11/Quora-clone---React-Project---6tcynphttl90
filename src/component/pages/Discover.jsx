@@ -3,6 +3,7 @@ import Sidebar from "../Left-Sidebar/Sidebar";
 import Navbar from "../Navbar/Navbar"
 import "./Styles/style.css"
 import discover from "../../image/discover.jpg"
+import Footer from '../footer/Footer';
 const Discover = () => {
   return (
     <>
@@ -17,6 +18,7 @@ const Discover = () => {
       </div>
     </div>
   </div>
+  <Footer />
   </>
   )
 }

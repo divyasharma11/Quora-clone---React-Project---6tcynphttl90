@@ -6,14 +6,13 @@ import { useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../footer/Footer";
 import Sidebar from "../Left-Sidebar/Sidebar";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const AddQues = (props) => {
   const navigate=useNavigate();
 
   const [Ques,setQues]=useState('');
-  
-  //    console.log(localStorage.getItem("questionObj"));
-
 
      var i=props.count;
    
@@ -28,11 +27,30 @@ const AddQues = (props) => {
       localStorage.setItem(`QuestionList`,JSON.stringify(props.questionObj));
       i++;
       props.setCount(i) 
-
-      navigate('/home');
+      toast.success("Question added successfully !", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+      // navigate('/home');
       }
       else{
-          alert("Please Enter Question")
+          // alert("Please Enter Question")
+          toast.error("Please Enter Question!", {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
       }
 
   };
@@ -44,6 +62,7 @@ const AddQues = (props) => {
   };
   return (
     <>
+     <ToastContainer />
     <Navbar />
     <div className="add_ques-container">
       <div className="ques-card">
