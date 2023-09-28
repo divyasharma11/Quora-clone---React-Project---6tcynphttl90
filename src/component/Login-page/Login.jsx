@@ -44,7 +44,8 @@ const handleLogin = (event) => {
       JSON.stringify({ ...userRef.current, islogged: true })
     );
     navigate("/home");
-    window.location.reload();
+    // window.location.reload();
+    
   }
 };
 

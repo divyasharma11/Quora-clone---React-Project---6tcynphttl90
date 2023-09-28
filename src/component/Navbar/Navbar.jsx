@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useState } from "react";
 import "./Navbar.css";
 import { getItem } from "../../getUser";
@@ -7,14 +7,16 @@ import FeaturedPlayListIcon from "@mui/icons-material/FeaturedPlayList";
 import AssignmentTurnedInIcon from "@mui/icons-material/AssignmentTurnedIn";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import NotificationsIcon from "@mui/icons-material/Notifications";
-import button from "../ButtonComponent/Button";
+import buttons from "../ButtonComponent/Button";
 import { useNavigate } from "react-router-dom";
-import { Search } from "@mui/icons-material";
+import { MediaBluetoothOnSharp, Search } from "@mui/icons-material";
 import { auth } from "../../firebase";
 import { Avatar } from "@mui/material";
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Navbar = ({
   search,
@@ -42,22 +44,45 @@ const Navbar = ({
     // }
   };
   const handleLogout =()=>{
-    if (window.confirm("Do you want to Logout?")) {
+    // if (window.confirm("Do you want to Logout?")) {
+      toast.info("Logout successfully!", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       auth
         .signOut()
         .then(() => {
+          setTimeout(() => {
           navigate("/");
           window.location.reload();
           localStorage.setItem(
             "user",
             JSON.stringify({ ...userRef.current, islogged: false })
           );
+        }, 3000);
         })
         .catch((error) => {
-          console.log(error);
+          // console.log(error);
+          toast.error("Logout Error!", {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
         });
-    }
+    // }
   }
+  
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -68,6 +93,7 @@ const Navbar = ({
   };
   return (
     <div className="nav-container">
+       <ToastContainer />
       <div className="navbar-logo">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Quora_logo_2015.svg/250px-Quora_logo_2015.svg.png"
