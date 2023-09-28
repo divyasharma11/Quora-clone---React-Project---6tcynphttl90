@@ -17,30 +17,7 @@ const AddAns = (props) => {
   const [selectedQuestionIndex, setSelectedQuestionIndex] = useState(null);
   const inputRef = useRef("");
   
-  // useEffect(() => {
-  //   localStorage.setItem(`QuestionAnswer`, JSON.stringify(props.quesAns));
-  // }, [props.quesAns]);
-
-  // function answerSubmit() {
-  //   if (selectedQue.question && ans !== "") {
-  //     props.setQuesAns([
-  //       ...props.quesAns,
-  //       {
-  //         question: selectedQue.question,
-  //         answer: ans,
-  //       },
-  //     ]);
-  //     setAns("");
-  //     setSelectedQuestionIndex(null);
-  //     alert("Answer added");
-  //     localStorage.setItem(`QuestionAnswer`, JSON.stringify(props.quesAns));
-  //     navigate("/home");
-  //   } else {
-  //     alert(
-  //       "Please select a question from the questions list and write your answer."
-  //     );
-  //   }
-  // }
+  
   function answerSubmit() {
     if (selectedQue.question && ans !== "") {
       const updatedQuestionAnswer = [

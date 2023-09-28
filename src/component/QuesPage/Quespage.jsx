@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../footer/Footer"
-import "./QuesAns.css";
+import "./Quespage.css";
 import Sidebar from "../Left-Sidebar/Sidebar";
 import QuesList from "../Right-Sidebar/QuesList";
 

@@ -6,7 +6,7 @@ import AddAns from "./component/AddAns/AddAns";
 import AddQues from "./component/AddQues/AddQues";
 import Register from "./component/Register/Register";
 import searchList from "./component/SearchList";
-import QuesAns from "./component/QuesAnsPage/QuesAns";
+import Quespage from "./component/QuesPage/Quespage";
 import History from "./component/pages/History";
 import  Business  from "./component/pages/Business";
 import Education from "./component/pages/Education";
@@ -43,7 +43,7 @@ function App() {
             <Route path="/question-list" element={<LongListQues/>}/>
             <Route path="/question-container" element={<QuesContainer/>}/>
             <Route path="/register" element={<Register />}/>
-            <Route path="/quesanspage" element={<QuesAns questionObj={questionObj} setQuestionObj={setQuestionObj} quesAns={quesAns} setQuesAns={setQuesAns} />}/>
+            <Route path="/quespage" element={<Quespage questionObj={questionObj} setQuestionObj={setQuestionObj} quesAns={quesAns} setQuesAns={setQuesAns} />}/>
             <Route path="/history" element={<History />}/>
             <Route path="/business" element={<Business />}/>
             <Route path="/education" element={<Education />}/>
