@@ -3,12 +3,12 @@
     flex-direction: column;
     margin-top: 2rem;
     margin-left: 1rem;
-    /* margin-right: .5rem; */
     position: sticky;
     width: 18rem;
     height: fit-content;
     background-color: #fff;
-    box-shadow: 0px 0px 2px rgb(190, 187, 187);
+    box-shadow: 0px 5px 10px 2px rgb(190, 187, 187);
+    /* box-shadow: 0px 0px 2px rgb(190, 187, 187); */
     padding-bottom: 4rem;
   }
   .sidebar {
@@ -47,6 +47,25 @@
     font-size: 13px;
   }
   /* Media queries */
+@media (max-width: 768px) {
+  .sidebar-container {
+    width: fit-content;
+    height: fit-content;
+    background-color: #fff;
+    box-shadow: 0px 0px 2px rgb(190, 187, 187);
+    padding-bottom: 4rem;
+  }
+  .sidebar {
+    padding: 10px;
+    padding-top:15px ;
+  }
+  .sidebar  img {
+    margin-left: 20px;
+  } 
+  .sidebar  .MuiSvgIcon-root {
+    margin-left: 20px;
+  }
+}
 @media (max-width: 576px) {
   .sidebar-container{
     display: none;

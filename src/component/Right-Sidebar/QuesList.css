@@ -36,6 +36,14 @@ h2{
     color: red;
 }
 
+@media (max-width: 768px){
+    .QList{
+        width: fit-content;
+        height: fit-content;
+        margin-top: 1rem;
+        margin-bottom: 30px;
+    }
+   }
 @media (max-width: 576px){
     .QList{
         width: fit-content;

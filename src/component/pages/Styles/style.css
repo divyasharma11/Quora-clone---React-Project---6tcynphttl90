@@ -66,16 +66,28 @@
     height: fit-content;
     overflow-wrap: anywhere;
   }
-  
+  @media (max-width: 768px) {
+    .feed-container {
+      /* width:fit-content; */
+      padding: 10px;
+    }
+    .inner-ques-card img{
+      width: 300px;
+    }
+    .inner-ques-card {
+      padding: 0.8rem;
+      margin-left: 1rem;
+    }
+  }
   @media (max-width: 576px) {
     .feed-container {
-      width:fit-content;
-      padding: 1rem;
+      /* width:fit-content; */
+      padding: 2rem;
     }
   
     .inner-ques-card {
       padding: 0.8rem;
-      margin-left: .2rem;
+      margin-left: .1rem;
     }
 
     .inner-ques-card img{

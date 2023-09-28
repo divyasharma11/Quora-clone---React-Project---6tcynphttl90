@@ -106,6 +106,49 @@
     margin-right: 2rem;
   }
   
+  @media (max-width: 768px) {
+    .nav-container {
+      flex-direction: column;
+      width: 100%;
+      height: fit-content;
+    }
+
+    .navbar-logo img {
+      /* display: none; */
+      margin-top: 1rem;
+      margin-left: 1rem;
+    }
+  
+    .nav-icons {
+      justify-content: space-between;
+      margin-top: 1rem; 
+    }
+  
+    .nav-icon .MuiSvgIcon-root {
+      font-size: xx-large;
+
+    }
+  
+    .nav-input {
+      margin-top: 1rem; 
+    }
+  
+    .btn-container {
+      justify-content: space-evenly;
+      margin-right: 1rem;
+      margin-top: 1rem;
+      margin-bottom: 10px;
+    }
+    .btn{
+     font-size: 15px !important;
+     padding: 5px;
+    }
+    .nav-input .search-btn {
+     left: 14rem;
+    }
+
+  }
+  
   @media (max-width: 576px) {
     .nav-container {
       flex-direction: column;
@@ -145,9 +188,6 @@
     .nav-input .search-btn {
      left: 14rem;
     }
-  
-    /* .search-questions {
-     width: 8rem;
-    } */
+
   }
   
