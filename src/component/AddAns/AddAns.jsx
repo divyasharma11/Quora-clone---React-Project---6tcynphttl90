@@ -7,6 +7,7 @@ import Navbar from "../Navbar/Navbar";
 import Footer from "../footer/Footer";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import QuesList from "../Right-Sidebar/QuesList";
 
 const AddAns = (props) => {
   const navigate = useNavigate();
@@ -32,7 +33,6 @@ const AddAns = (props) => {
       props.setQuesAns(updatedQuestionAnswer);
       setAns("");
       setSelectedQuestionIndex(null);
-
       toast.success("Answere added successfully!", {
         position: "top-right",
         autoClose: 3000,
@@ -82,7 +82,11 @@ const AddAns = (props) => {
     {id: 7,question: "How many hours are there in a day?" },
     {id: 8,question: "What do you think the meaning of life is?" },
     {id: 9,question: "If money were no object, what would you do?" },
-   
+    {id: 10,question: "If money were no object, what would you do?" },
+    {id: 11,question: "Which is the largest plateau in the world?" },
+    {id: 12,question: "Who designed the National Flag of India?" },
+    {id: 13,question: "Who designed the National Flag of India?" },
+    {id: 14,question: "How many days are there in a year?" },
   ];
 
   localQuesList = JSON.parse(localStorage.getItem("QuestionList"));
@@ -90,7 +94,7 @@ const AddAns = (props) => {
     setSelectedQue({
       question,
     });
-    setSelectedQuestionIndex(index);
+     setSelectedQuestionIndex(index);
     inputRef.current.focus();
   }
 
@@ -103,7 +107,7 @@ const AddAns = (props) => {
           <div className="select_quest_List">
             <h2>Selection List</h2>
             <hr />
-            <div className="list">
+            <div className="list">        
               {quesList &&
                 quesList.map((data, index) => (
                   <span className="span-tags" key={data.id}>
@@ -122,24 +126,24 @@ const AddAns = (props) => {
                     </p>
                   </span>
                 ))}
-                 {localQuesList &&
+                 {/* {localQuesList &&
                 localQuesList.map((e, index) => (
                   <span className="span-tags" key={index}>
                     <p
                       onClick={() =>
                         handleQueAns(
                           e.question,
-                          index
+                          index                       
                         )
                       }
                       className={`questionAns ptag ${
-                        selectedQuestionIndex === index ? "active" : ""
+                        selectedQuestionIndex === index ? "active" : ""                      
                       }`}
                     >
                       {e}
                     </p>
                   </span>
-                ))}
+                ))} */}
 
             </div>
           </div>

@@ -55,7 +55,7 @@
     height: fit-content;
     background-color: #fff;
     box-shadow: 0px 5px 6px 2px rgb(190, 187, 187);
-   padding-bottom: 3rem;
+   /* padding-bottom: 3rem; */
    border-radius: 7px;
   }
   .select_quest_List h2{
