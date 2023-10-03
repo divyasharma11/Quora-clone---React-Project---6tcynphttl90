@@ -32,7 +32,7 @@ const QuesList = (props) => {
               </p>
             </span>
           ))}
-        {quesList &&
+        {/* {quesList &&
           quesList.map((data) => (
             <span className="span-tags" key={data.id}>
               <p 
@@ -40,7 +40,7 @@ const QuesList = (props) => {
               Q. {data.question}
               </p>
             </span>
-          ))}
+          ))} */}
           
       </div>
     </div>

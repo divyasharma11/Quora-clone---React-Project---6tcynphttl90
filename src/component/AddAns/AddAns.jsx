@@ -15,13 +15,15 @@ const AddAns = (props) => {
   const [answerAdded, setAnswerAdded] = useState(false);
   const [selectedQue, setSelectedQue] = useState({
     question: "",
-    questionedBy: "",
+    // questionedBy: "",
   });
   const [selectedQuestionIndex, setSelectedQuestionIndex] = useState(null);
   const inputRef = useRef("");
   
   
   function answerSubmit() {
+    console.log("ans",ans);
+    console.log("selectedQue.question",selectedQue);
     if (selectedQue.question && ans !== "") {
       const updatedQuestionAnswer = [
         ...props.quesAns,
@@ -108,7 +110,7 @@ const AddAns = (props) => {
             <h2>Selection List</h2>
             <hr />
             <div className="list">        
-              {quesList &&
+              {/* {quesList &&
                 quesList.map((data, index) => (
                   <span className="span-tags" key={data.id}>
                     <p
@@ -125,14 +127,14 @@ const AddAns = (props) => {
                       {data.question}
                     </p>
                   </span>
-                ))}
-                 {/* {localQuesList &&
+                ))} */}
+                 {localQuesList &&
                 localQuesList.map((e, index) => (
                   <span className="span-tags" key={index}>
                     <p
                       onClick={() =>
                         handleQueAns(
-                          e.question,
+                          e,
                           index                       
                         )
                       }
@@ -143,7 +145,7 @@ const AddAns = (props) => {
                       {e}
                     </p>
                   </span>
-                ))} */}
+                ))}
 
             </div>
           </div>

@@ -4,8 +4,6 @@ import Button from "../ButtonComponent/Button";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Navbar from "../Navbar/Navbar";
-import Footer from "../footer/Footer";
-import Sidebar from "../Left-Sidebar/Sidebar";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -29,7 +27,7 @@ const AddQues = (props) => {
       props.setCount(i) 
       toast.success("Question added successfully !", {
         position: "top-right",
-        autoClose: 3000,
+        autoClose: 1000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
