@@ -88,11 +88,12 @@
   
     .inner-ques-card {
       padding: 0.8rem;
-      margin-left: .1rem;
+      margin-left: .01rem;
     }
 
     .inner-ques-card img{
-      width: 300px;
+      width: 200px;
+      height: 300px;
     }
     .h2 {
       font-size: 1.2rem;
