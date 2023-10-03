@@ -82,7 +82,7 @@
   }
   @media (max-width: 576px) {
     .feed-container {
-      /* width:fit-content; */
+      width:fit-content;
       padding: 2rem;
     }
   
@@ -92,7 +92,7 @@
     }
 
     .inner-ques-card img{
-      width: 200px;
+      width: 250px;
       height: 300px;
     }
     .h2 {
