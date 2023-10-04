@@ -30,23 +30,23 @@
       question: "When did the world war start?",
       answer: "The world war 1 started in 1914",
     },
-    {
-      id: 5,
-     username: "Ravi Choudhary",
-      question: 'Which animal is known as the "Ship of the Desert"?',
-      answer: "Camel",
-    },
-    {
-      id: 6,
-     username: "Kundan Rathore",
-      question: "How many consonants are there in the English alphabet?",
-      answer: "21 Consonants",
-    },
-    {
-      id: 7,
-     username: "vidhi Tivari",
-      question: "Who designed the National Flag of India?",
-      answer: "Pingali Venkayya",
-    },
+    // {
+    //   id: 5,
+    //  username: "Ravi Choudhary",
+    //   question: 'Which animal is known as the "Ship of the Desert"?',
+    //   answer: "Camel",
+    // },
+    // {
+    //   id: 6,
+    //  username: "Kundan Rathore",
+    //   question: "How many consonants are there in the English alphabet?",
+    //   answer: "21 Consonants",
+    // },
+    // {
+    //   id: 7,
+    //  username: "vidhi Tivari",
+    //   question: "Who designed the National Flag of India?",
+    //   answer: "Pingali Venkayya",
+    // },
   ];
   export default searchList;

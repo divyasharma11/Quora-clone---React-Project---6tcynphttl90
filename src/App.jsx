@@ -37,7 +37,7 @@ function App() {
       <BrowserRouter >
         <Routes>        
             <Route path="/" element={<Login/>}/>
-            <Route path="/home" element={<Home searchQuestion={searchQuestion} setSearchQuestion={setSearchQuestion} search={search} setSearch={setSearch} searchedQues={searchedQues} searchedAns={searchedAns}  setSearchedQues={setSearchedQues} setSearchedAns={setSearchedAns}/>}/>
+            <Route path="/home" element={<Home quesAns={quesAns} searchQuestion={searchQuestion} setSearchQuestion={setSearchQuestion} search={search} setSearch={setSearch} searchedQues={searchedQues} searchedAns={searchedAns}  setSearchedQues={setSearchedQues} setSearchedAns={setSearchedAns}/>}/>
             <Route path="/add_ques" element={<AddQues quesAns={quesAns} setQuesAns={setQuesAns} count={count} setCount={setCount} questionObj={questionObj} setQuestionObj={setQuestionObj}/>}/>
             <Route path="/ans_ques" element={<AddAns quesAns={quesAns} setQuesAns={setQuesAns} questionObj={questionObj}  />}/>
             <Route path="/question-list" element={<LongListQues/>}/>

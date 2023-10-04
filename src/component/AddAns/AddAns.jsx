@@ -20,13 +20,12 @@ const AddAns = (props) => {
   const [selectedQuestionIndex, setSelectedQuestionIndex] = useState(null);
   const inputRef = useRef("");
   
-  
   function answerSubmit() {
-    console.log("ans",ans);
     console.log("selectedQue.question",selectedQue);
     if (selectedQue.question && ans !== "") {
       const updatedQuestionAnswer = [
-        ...props.quesAns,
+        // ...props.quesAns,
+        ...(JSON.parse(localStorage.getItem("QuestionAnswer"))),
         {
           question: selectedQue.question,
           answer: ans,
@@ -37,7 +36,7 @@ const AddAns = (props) => {
       setSelectedQuestionIndex(null);
       toast.success("Answere added successfully!", {
         position: "top-right",
-        autoClose: 3000,
+        autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -84,11 +83,11 @@ const AddAns = (props) => {
     {id: 7,question: "How many hours are there in a day?" },
     {id: 8,question: "What do you think the meaning of life is?" },
     {id: 9,question: "If money were no object, what would you do?" },
-    {id: 10,question: "If money were no object, what would you do?" },
-    {id: 11,question: "Which is the largest plateau in the world?" },
-    {id: 12,question: "Who designed the National Flag of India?" },
-    {id: 13,question: "Who designed the National Flag of India?" },
-    {id: 14,question: "How many days are there in a year?" },
+    // {id: 10,question: "If money were no object, what would you do?" },
+    // {id: 11,question: "Which is the largest plateau in the world?" },
+    // {id: 12,question: "Who designed the National Flag of India?" },
+    // {id: 13,question: "Who designed the National Flag of India?" },
+    // {id: 14,question: "How many days are there in a year?" },
   ];
 
   localQuesList = JSON.parse(localStorage.getItem("QuestionList"));

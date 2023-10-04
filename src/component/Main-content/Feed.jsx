@@ -6,27 +6,11 @@ import { getItem } from "../../getUser";
 const Feed = ({ searchQuestion, setSearchQuestion }) => {
   let quesAnsList = [];
   const userRef = useRef(getItem("user"));
+  
   quesAnsList = JSON.parse(localStorage.getItem("QuestionAnswer"));
   
   return (
     <div className="post-container"> 
-    {  quesAnsList &&
-            quesAnsList.map((e, index) => (
-              <div key={index}  className="inner-ques-card1">
-                 <div className="avatar-box">
-                 <Avatar className="avatar" />
-                  <h2 className="h2">{userRef.current?.username}</h2>
-                 </div>
-                 <h3 className="h3">
-              <span>Ques.</span>
-              {e.question}
-            </h3>
-             <p className="p">
-              <span>Ans.</span>
-              {e.answer}
-              </p>
-              </div>
-            ))}   
       {searchQuestion &&
         searchQuestion.map((data) => (
           <div className="inner-ques-card1" key={data.id}>
@@ -44,6 +28,23 @@ const Feed = ({ searchQuestion, setSearchQuestion }) => {
             </p>
           </div>
         ))}
+        {  quesAnsList &&
+            quesAnsList.map((e, index) => (
+              <div key={index}  className="inner-ques-card1">
+                 <div className="avatar-box">
+                 <Avatar className="avatar" />
+                  <h2 className="h2">{userRef.current?.username}</h2>
+                 </div>
+                 <h3 className="h3">
+              <span>Ques.</span>
+              {e.question}
+            </h3>
+             <p className="p">
+              <span>Ans.</span>
+              {e.answer}
+              </p>
+              </div>
+            ))}   
     </div>
   );
 };

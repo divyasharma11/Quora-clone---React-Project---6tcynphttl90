@@ -15,6 +15,7 @@ const Homepage = ({
   setSearchQuestion,
   searchQuestion,
 }) => {
+  // console.log("line no 18",props)
   return (
     <div className="home">
       <Navbar

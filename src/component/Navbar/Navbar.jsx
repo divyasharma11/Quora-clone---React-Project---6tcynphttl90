@@ -104,7 +104,7 @@ const Navbar = ({
         <div className="active nav-icon" title="Home">
           <HomeIcon onClick={()=>navigate('/home')}/>
         </div>
-        <div className="nav-icon" title="Question-Answer-List">
+        <div className="nav-icon" title="Question-List">
           <FeaturedPlayListIcon  onClick={()=>navigate('/quespage')}/>
         </div>
         <div className="nav-icon" title="Add-Answer">

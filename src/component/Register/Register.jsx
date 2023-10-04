@@ -90,28 +90,29 @@ const Register = () => {
             <h1>New Register</h1>
           </div>
           <div>
-            <input
-              className="input-style-register"
-              placeholder="Enter Email"
-              type="email"
-              id="email"
-              name="email"
-              value={email}
-              onChange={handleChange}
-              required
-            />
-            <div style={{color:"red"}} id="name_error" ref={nameErrorRef}>
-            name must be at least 3 characters.
-          </div>
-          </div>
-          <div>
-            <input
+          <input
               className="input-style-register"
               placeholder="Enter Username"
               type="text"
               id="name"
               name="name"
               value={name}
+              onChange={handleChange}
+              required
+            />
+           
+            <div style={{color:"red"}} id="name_error" ref={nameErrorRef}>
+            name must be at least 3 characters.
+          </div>
+          </div>
+          <div>
+          <input
+              className="input-style-register"
+              placeholder="Enter Email"
+              type="email"
+              id="email"
+              name="email"
+              value={email}
               onChange={handleChange}
               required
             />
