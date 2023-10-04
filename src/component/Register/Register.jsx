@@ -138,12 +138,12 @@ const Register = () => {
           <div>
             <Button
               onClick={handleClick}
-              style={{
-                fontSize: "1rem",
-                width: "6rem",
-                marginTop: "0px",
-                textAlign: "center",
-              }}
+              // style={{
+              //   fontSize: "1rem",
+              //   width: "6rem",
+              //   marginTop: "0px",
+              //   textAlign: "center",
+              // }}
             >
               <span>Register</span>
             </Button>

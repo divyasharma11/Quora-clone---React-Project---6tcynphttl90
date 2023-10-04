@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Login.css";
+import Button from "../ButtonComponent/Button";
 import { useNavigate } from "react-router-dom";
 import {getItem} from "../../getUser"
 import { TextField } from "@mui/material";
@@ -119,7 +120,7 @@ const handleLoginDetails = (event) => {
             <div className="leftSideBtn">
               <button
                 type="submit"
-                className="loginBttn googleBttn"
+                className="googleBttn"
                 onClick={googleLogin}
               >
                 <img src={logo} alt="logo" className="googleLogo" />

@@ -136,9 +136,9 @@
       justify-content: space-evenly;
     }
 
-    .btn{
+    .Navbar_btn{
      font-size: 15px !important;
-     padding: 5px;
+     /* padding: 5px; */
     }
 
   }

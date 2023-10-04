@@ -162,12 +162,10 @@ const AddAns = (props) => {
         </div>
         <div className="ans-btn">
           <Button
-            onClick={closeModalHandler}
-            style={{ width: "5rem", fontSize: "1rem" }}
-          >
+            onClick={closeModalHandler}>
             <span>Cancel</span>
           </Button>
-          <Button onClick={answerSubmit} style={{ fontSize: "1rem" }}>
+          <Button onClick={answerSubmit}>
             <span>Post Answer</span>
           </Button>
         </div>

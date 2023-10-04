@@ -7,7 +7,7 @@ import FeaturedPlayListIcon from "@mui/icons-material/FeaturedPlayList";
 import AssignmentTurnedInIcon from "@mui/icons-material/AssignmentTurnedIn";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import NotificationsIcon from "@mui/icons-material/Notifications";
-import buttons from "../ButtonComponent/Button";
+import Buttons from "../ButtonComponent/Button";
 import { useNavigate } from "react-router-dom";
 import { MediaBluetoothOnSharp, Search } from "@mui/icons-material";
 import { auth } from "../../firebase";
@@ -27,8 +27,8 @@ const Navbar = ({
 }) => {
   const navigate = useNavigate();
   const userRef = useRef(getItem("user"));
-  const [isQuesModalOpen, setIsQuesModalOpen] = useState(false);
-  const [isAnsModalOpen, setIsAnsModalOpen] = useState(false);
+  // const [isQuesModalOpen, setIsQuesModalOpen] = useState(false);
+  // const [isAnsModalOpen, setIsAnsModalOpen] = useState(false);
 
   const inputHandler = (event) => {
     setSearch(event.target.value);
@@ -132,13 +132,12 @@ const Navbar = ({
       </div>
       <div className="btn-container">
       <div>
-        <button
+        <Buttons
           onClick={() => navigate('/add_ques')}
-          style={{ fontSize: "1rem" }}
-          className="btn"
+          // className="Navbar_btn"
         >
          <span>Add questions</span>
-        </button>
+        </Buttons>
       </div>
       {/* <div>
         <Button

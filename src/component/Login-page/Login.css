@@ -65,7 +65,7 @@
     margin-top: 15px !important;
   }
   
-  button {
+  .googleBttn,.signupBtn {
     margin: 20px 0 20px 0;
     font-size: 14px;
     font-weight: bold;
@@ -73,7 +73,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: all ease 0.4s;
+    /* transition: all ease 0.4s; */
   }
   
   #name_error,
@@ -149,9 +149,18 @@
   }
   
   .loginBttn {
+    margin: 2rem;
+    border-radius: 7px;
+    border: none;
+    text-align: center;
+    padding:5px 20px;
+    width: fit-content;
+    height: 40px; 
     background-color: rgb(179, 23, 18);
-    color: #fff;
+    color: rgb(255, 255, 255);
     cursor: pointer;
+    font-size: medium;
+    font-weight: 500;
   }
   
   .loginBttn:hover,

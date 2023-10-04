@@ -79,11 +79,10 @@ const AddQues = (props) => {
       <div className="button-style">
         <Button
           onClick={closeModalHandler}
-          style={{ width: "4rem", fontSize: "1rem" }}
         >
           <span>Cancel</span>
         </Button>
-        <Button onClick={ques_posted} style={{fontSize:"1rem"}} >
+        <Button onClick={ques_posted}  >
           <span>Post Question</span>
         </Button>
       </div>

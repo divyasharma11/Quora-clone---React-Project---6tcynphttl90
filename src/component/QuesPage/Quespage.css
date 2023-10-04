@@ -5,11 +5,13 @@
     justify-content: center;
     align-items: center;
     margin-left: 5rem;
+    margin-top: -6rem;
   }
   
   .main {
     display: flex;
     background-color: whitesmoke;
+    padding-bottom: 4rem;
   }
   
   .ptag {
@@ -21,8 +23,8 @@
   @media (max-width: 768px) {
     .qa-container {
       width: fit-content;
-      margin-left: 3rem;
-      margin-top: 1rem;
+      /* margin-left: 6rem; */
+      margin-top: 2rem;
       height: fit-content;
     }
   }
@@ -30,8 +32,8 @@
   @media (max-width: 576px) {
     .qa-container {
       width: fit-content;
-      margin-left: 1rem;
-      margin-top: 2rem;
+      /* margin-left: 2rem; */
+      margin-top: 4rem;
       height: fit-content;
     } 
   }
